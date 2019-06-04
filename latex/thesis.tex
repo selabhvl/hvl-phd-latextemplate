@@ -1,0 +1,172 @@
+%
+% Settings file
+%
+\include{settings}	% Document settings file
+
+%
+% We use the book class
+%
+\ifcompileiliad
+	\documentclass[10pt]{book}
+\else
+	\documentclass[12pt]{book} % default based on settings
+\fi
+
+%
+% The geometry package allows consistent control of page layout
+%
+\ifcompileiliad
+	\setlength{\parindent}{0pt}
+	\setlength{\parskip}{3ex}
+	\usepackage[papersize={122mm,160mm},
+				hmargin=0.2cm,
+				vmargin=0.2cm,
+				tmargin=1.0cm,
+				bmargin=0.4cm,
+				dvips]
+				{geometry}
+\else
+	\usepackage[paper = a4paper,         %To be shrunk to 80% when printed
+				twoside,                 %Two-side mode, switches margins on
+				bindingoffset = 2mm,     %Offset for binding side of page
+				hmargin = 25mm,          %Left and right margin
+				vmargin = 25mm,          %Top and bottom margin
+				dvipdfm]
+				{geometry}
+\fi
+
+%
+% Include all packages
+%
+\include{preamble}
+
+%
+% Set header height to 30pt to make room for two rows in the header
+% (useful if you have very long chapter names)
+%
+%\headheight 30pt
+
+%
+% Include user-defined macros
+%
+\include{macros}
+
+%
+% TeX is very proud of its hyphenation engine, to the point where it
+% hyphenates _everything_ just to show off.  Increasing penalty for
+% hyphenation, and increase tolerance for underfull boxes can make
+% the text easier to read, at the expense of making the text less aligned
+% to the right margin
+%
+\hyphenpenalty=10
+\tolerance=1000
+
+% Redefine include command -> input command
+%\renewcommand{\include}{\input}
+
+% Include only these chapters
+%\includeonly{introduction}
+
+%
+% Set up the frontpage, with author, title, etc
+%
+\title{
+{\fontsize{28}{30}\usefont{OT1}{phv}{bc}{n}\selectfont Title goes here}
+	\author{
+	\textbf{Author}\vspace{3cm}\\
+		\includegraphics[scale=0.36]{logos/logo.pdf}\vspace{1em}\\
+		Dissertation for the degree of Philosophiae Doctor (PhD)\vspace{3.5em}\\
+		Department of Computing, Mathematics and Physics \\
+		Western Norway University of Applied Sciences
+	}
+	\date{Month year}
+}
+
+
+%====================================================
+%------------------ BEGIN DOCUMENT ------------------
+%====================================================
+\begin{document}
+%Cause all references in bibtex file to appear in the 'References' section, even
+%if they are not explicitly cite'ed in the document
+%\nocite{*}
+
+%Set the fontsize and baselineskip, if something other than 10 or 12 is required,
+%(default is 13pt based on UiB standard in setting)
+\ifDownscaledFinalDoc
+	\fontsize{\TextSize}{\BaseLineSkip}
+	\selectfont
+\fi
+
+%Double line spacing for draft
+\ifDraft
+	\doublespacing
+\fi
+
+
+%--------------------------------------------------------------------------------------------------
+% FRONT MATTER
+%--------------------------------------------------------------------------------------------------
+\maketitle
+\normalsize\vspace*{15cm}
+\begin{minipage}{13cm}
+Doctoral Dissertation at Western Norway University of Applied Sciences\\
+ISSN: \\ %number has to be decided by the library of the university
+ISBN: \\[2ex] %number has to be decided by the library of the university
+\copyright{Author}, year\\[2ex] %insert your name and the correct year
+Printed by ...\\
+Bergen, Norway
+\end{minipage}
+
+\frontmatter
+\tableofcontents
+\include{preface/acknowledgements}
+\include{preface/scientific_environment}
+\include{preface/abstract}
+\include{preface/listofpublications}
+
+%--------------------------------------------------------------------------------------------------
+% MAIN MATTER
+%--------------------------------------------------------------------------------------------------
+\mainmatter
+
+%
+% Main chapters
+%
+% Part One:
+\part{Overview}
+\label{part:1}
+
+\include{chapter-1/introduction}         % Introduction
+\include{chapter-2/otherchapers}
+\include{chapter-3/conclusion}
+%
+% The bibliography
+% Physics-style bibliography
+%\bibliographystyle{iopart-num}
+% Modified mathematics bibliography. Uses acm.bst
+%
+\bibliographystyle{acm}
+\bibliography{thesis,chapter-1/chapter-1}
+
+% Part Two:
+\part{Scientific Contributions}
+\label{part:2}
+\include{papers}  % The papers, with cover pages
+%
+% Appendices
+%
+%\appendix
+%\include{appendixA}             % Appendix A: Something
+\listoffigures
+\lstlistoflistings
+\listoftables
+
+%--------------------------------------------------------------------------------------------------
+% BACK MATTER
+%--------------------------------------------------------------------------------------------------
+\backmatter
+
+
+
+\end{document}

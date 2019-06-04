@@ -1,0 +1,4 @@
+$pdf_previewer = 'start okular';
+$dvi_previewer = 'start okular';
+$dvipdf = './dvipdfmx_call';
+$latex = 'latex --src-specials';

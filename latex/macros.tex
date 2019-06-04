@@ -1,0 +1,56 @@
+%====================================================
+%-------------Macro definitions go here--------------
+%====================================================
+
+%
+% Differentials
+%
+\newcommand{\tdiff}[2]{\ensuremath{\frac{d#2}{d{#1}}}}
+\newcommand{\tdifforder}[3]{\ensuremath{\frac{d^{#2}#3}{d{#1}^{#2}}}}
+\newcommand{\pdiff}[2]{\ensuremath{\frac{\partial#2 }{\partial#1}}}
+\newcommand{\pdifforder}[3]{\ensuremath{\frac{\partial^{#2}#3}{\partial{#1}^{#2}}}}
+
+%
+% Linear algebra
+%
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\mat}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\tildemat}[1]{\ensuremath{\widetilde{\mat{#1}}}}
+
+
+%
+% Misc macros
+%
+\newcommand{\eref}[1]{~(\ref{#1})}
+\renewcommand{\equiv}[0]{\ensuremath{:=}}
+\newcommand{\etal}{\textit{et al. }}
+\newcommand{\paperheader}[2]{\noindent\textbf{Paper #1}: \textit{#2}\\}
+\newcommand{\paperitem}[3]{\noindent\textbf{Paper #1}: \textit{#2}\vspace{1em}\\\noindent #3\vspace{2em}}
+\newcommand{\tfinal}{\ensuremath{T_{\text{f}}}}
+\newcommand{\papernum}[1]{\textbf{#1}}
+
+
+%
+% Theorem environments
+%
+\newtheorem{definition}{Definition}
+
+
+%
+% Counters
+%
+\newcounter{ct}
+
+%
+% For loop to include papers
+%
+\newcommand{\includepaperpages}[2]
+{
+	\forloop{ct}{0}{\value{ct} < #2}
+	{
+		\begin{figure}[ht]
+			\includegraphics[width=.99\textwidth]{#1\the\value{ct}.ps}
+		\end{figure}
+		\clearpage
+	}
+}
