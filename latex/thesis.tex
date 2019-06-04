@@ -9,7 +9,7 @@
 \ifcompileiliad
 	\documentclass[10pt]{book}
 \else
-	\documentclass[12pt]{book} % default based on settings
+	\documentclass[12pt]{book} % Default, based on settings
 \fi
 
 %
@@ -25,8 +25,8 @@
 				bmargin=0.4cm,
 				dvips]
 				{geometry}
-\else
-	\usepackage[paper = a4paper,         %To be shrunk to 80% when printed
+\else %Default, based on settings
+	\usepackage[paper = a4paper,   %To be shrunk to 80% when printed
 				twoside,                 %Two-side mode, switches margins on
 				bindingoffset = 2mm,     %Offset for binding side of page
 				hmargin = 25mm,          %Left and right margin
@@ -60,12 +60,6 @@
 %
 \hyphenpenalty=10
 \tolerance=1000
-
-% Redefine include command -> input command
-%\renewcommand{\include}{\input}
-
-% Include only these chapters
-%\includeonly{introduction}
 
 %
 % Set up the frontpage, with author, title, etc
@@ -166,7 +160,5 @@ Bergen, Norway
 % BACK MATTER
 %--------------------------------------------------------------------------------------------------
 \backmatter
-
-
 
 \end{document}

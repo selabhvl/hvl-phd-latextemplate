@@ -3,40 +3,37 @@
 %
 % Font settings
 %
-\usepackage[T1]{fontenc}	% Activate Type 1 fonts
+\usepackage[T1]{fontenc}	  % Activate Type 1 fonts
 \usepackage{mathptmx}       % Use Times font, also for math
 \usepackage[scaled]{helvet} % for sans serif fonts (\textsf{...} or \sffamiliy)
 \usepackage{sectsty}        % Change section and chapter header
-\allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont} % Set chapter/section header to narrow helvectica (arial-like)
-%\usepackage[scaled]{luximono} % for monospaced fonts (\texttt{...} or \ttfamily)
+\allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont} % Set chapter/section header to narrow
+\usepackage[utf8]{inputenc} % We want æøå
 
 %%%%%%%%%%%%%%%%%%
 % General packages
 %%%%%%%%%%%%%%%%%%
 \usepackage{xspace}
-\usepackage{verbatim} % at least use begin{comment} end{comment}
-\usepackage{booktabs} % Publication quality tables
+\usepackage{verbatim}   % at least use begin{comment} end{comment}
+\usepackage{booktabs}   % Publication quality tables
 %\usepackage[dvipdfmx]{graphicx} % Handles figures
 \usepackage{graphicx}
-\usepackage{bmpsize}            % Handles figures
+\usepackage{bmpsize}    % Handles figures
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \usepackage{color,soul}
 \usepackage{xcolor}
-\usepackage[utf8]{inputenc} % We want æøå
-\usepackage{amsfonts}
-\usepackage{amssymb}
+\usepackage{setspace}   % Easy setting of line spacing
 % Change the default alignment of a image from left or right an easy manner:
 \usepackage[export]{adjustbox}
 \usepackage[final]{pdfpages}
-\usepackage{multirow}
+\usepackage{epstopdf}
+\usepackage{multirow,multicol}
 \usepackage{array}
 
 %%%%%%%
 % Tikz/PGF
 %%%%%%%
-\usepackage{pgf}
-
 \usepackage{tikz}
 \usetikzlibrary{positioning,shapes.geometric}
 \usetikzlibrary{arrows,automata,positioning}
@@ -47,31 +44,40 @@
 \usetikzlibrary{patterns}
 \usetikzlibrary{topaths}
 
+\usepackage{pgf}
 %%%%%%%%%%%%
-% Algorithms & Math
+% Theorems & Math & Algorithms
 %%%%%%%%%%%%
+\usepackage{amsthm}
+\usepackage{thmtools}
 
 \usepackage{amsmath}
 \usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 
 %%%%%%%%%%%%
-% Other packages we need
+% Listings
 %%%%%%%%%%%%
+\usepackage[procnames]{listings} % beautiful listings
 
+%%%%%%%%%%%%
+% Other packages we can use
+%%%%%%%%%%%%
+\usepackage[english]{babel}    % language
 \usepackage[mathcal]{euscript} % For caligraphy fonts
-\usepackage{setspace}       % Easy setting of line spacing
-\usepackage{forloop}		% For-loops!
-\usepackage[numbers,
-			sort&compress
-			]{natbib}       % Sort numerical keys for multiple cites
+\usepackage{forloop}		       % For-loops!
+\usepackage[numbers,sort&compress]{natbib} % Sort numerical keys for multiple cites
 \usepackage{hypernat}       % Avoid breaking 'backref' option of hyperref package
 \usepackage{float}
 %\usepackage[dvipsnames]{color}   % named colors
-\usepackage[procnames]{listings} % beautiful listings
-\usepackage{units}				 % semantically represent numbers with units
-
+\usepackage{units}				  % semantically represent numbers with units
+\usepackage{url}
+%\usepackage{chapterbib}
 % Use notes as comments in thesis
 \usepackage{xargs}  % Use more than one optional parameter in a new commands
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
@@ -124,6 +130,7 @@
 %\newcommand{\aref}[1]{\autoref*{#1}} % Prevent links
 \newcommand{\aref}[1]{\autoref{#1}} % Enable links
 
+\usepackage{pdfcomment} % A user-friendly interface to pdf annotations
 %
 % Set fancy page header using fancyhdr package
 %
