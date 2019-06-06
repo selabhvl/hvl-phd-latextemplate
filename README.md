@@ -21,9 +21,9 @@ running the command
 
 > make cont
 
-This should generate thesis.pdf and open the file using the pdf-viewer okular.
+This should generate thesis.pdf and open the file using the pdf-viewer okular in Linux.
 It is possible to change the pdf-viewer by changing the $pdf_previewer variable
-in the configuration file "latexmkrc"
+in the configuration file "latexmkrc".
 
 To clean up the generated files, run the command
 > make clean
