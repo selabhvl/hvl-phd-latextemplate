@@ -2,6 +2,46 @@
 %-------------Macro definitions go here--------------
 %====================================================
 
+%%%%%%%%%%%%%%%%%%
+% Shorthand macros
+%%%%%%%%%%%%%%%%%%
+
+\newcommand{\secref}[1]{\S\ref{#1}\xspace}
+\newcommand{\figref}[1]{Fig.~\ref{#1}\xspace}
+\newcommand{\tabref}[1]{Table~\ref{#1}\xspace}
+\newcommand{\algoref}[1]{Algorithm~\ref{#1}\xspace}
+\newcommand{\listref}[1]{Listing~\ref{#1}\xspace}
+\newcommand{\partref}[1]{Part~\ref{#1}\xspace}
+\newcommand{\partsref}[1]{Parts~\ref{#1}\xspace}
+\newcommand{\eref}[1]{~(\ref{#1})}
+\renewcommand{\equiv}[0]{\ensuremath{:=}}
+\newcommand{\etal}{et\,al.}
+\newcommand{\paperheader}[2]{\noindent\textbf{Paper #1}: \textit{#2}\\}
+\newcommand{\paperitem}[3]{\noindent\textbf{Paper #1}: \textit{#2}\vspace{1em}\\\noindent #3\vspace{2em}}
+\newcommand{\tfinal}{\ensuremath{T_{\text{f}}}}
+\newcommand{\papernum}[1]{\textbf{#1}}
+\newcommand{\eg}{e.g.\xspace}
+\newcommand{\ie}{i.e.\xspace}
+\newcommand{\cf}{cf.\xspace}
+
+%
+% used first time a new concept is introduced
+%
+\newcommand\concept[1]{{\em #1}}
+
+%
+% used to comment out things
+%
+\newcommand\ignore[1]{}
+
+%
+% used for code
+%
+\newcommand{\smlcode}[1]{{\texttt{#1}}}
+
+% used when referencing to names in figures
+\newcommand{\figitem}[1]{\textsf{#1}}
+
 %
 % Differentials
 %
@@ -17,24 +57,10 @@
 \newcommand{\mat}[1]{\ensuremath{\mathbf{#1}}}
 \newcommand{\tildemat}[1]{\ensuremath{\widetilde{\mat{#1}}}}
 
-
-%
-% Misc macros
-%
-\newcommand{\eref}[1]{~(\ref{#1})}
-\renewcommand{\equiv}[0]{\ensuremath{:=}}
-\newcommand{\etal}{\textit{et al. }}
-\newcommand{\paperheader}[2]{\noindent\textbf{Paper #1}: \textit{#2}\\}
-\newcommand{\paperitem}[3]{\noindent\textbf{Paper #1}: \textit{#2}\vspace{1em}\\\noindent #3\vspace{2em}}
-\newcommand{\tfinal}{\ensuremath{T_{\text{f}}}}
-\newcommand{\papernum}[1]{\textbf{#1}}
-
-
 %
 % Theorem environments
 %
 \newtheorem{definition}{Definition}
-
 
 %
 % Counters

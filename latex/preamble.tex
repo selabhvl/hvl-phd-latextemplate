@@ -1,28 +1,29 @@
 %!TEX root = ./thesis.tex
 
-%
+%%%%%%%%%%%%%%%%%%
 % Font settings
-%
+%%%%%%%%%%%%%%%%%%
 \usepackage[T1]{fontenc}	  % Activate Type 1 fonts
 \usepackage{mathptmx}       % Use Times font, also for math
 \usepackage[scaled]{helvet} % for sans serif fonts (\textsf{...} or \sffamiliy)
 \usepackage{sectsty}        % Change section and chapter header
 \allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont} % Set chapter/section header to narrow
 \usepackage[utf8]{inputenc} % We want æøå
+\usepackage[mathcal]{euscript} % For caligraphy fonts
 
 %%%%%%%%%%%%%%%%%%
 % General packages
 %%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}    % language
 \usepackage{xspace}
 \usepackage{verbatim}   % at least use begin{comment} end{comment}
 \usepackage{booktabs}   % Publication quality tables
-%\usepackage[dvipdfmx]{graphicx} % Handles figures
 \usepackage{graphicx}
 \usepackage{bmpsize}    % Handles figures
 \usepackage{subcaption}
 \usepackage{wrapfig}
+\usepackage{xcolor}     % Handles colors
 \usepackage{color,soul}
-\usepackage{xcolor}
 \usepackage{setspace}   % Easy setting of line spacing
 % Change the default alignment of a image from left or right an easy manner:
 \usepackage[export]{adjustbox}
@@ -30,6 +31,13 @@
 \usepackage{epstopdf}
 \usepackage{multirow,multicol}
 \usepackage{array}
+\usepackage{forloop}		       % For-loops!
+\usepackage[numbers,sort&compress]{natbib} % Sort numerical keys for multiple cites
+\usepackage{hypernat}       % Avoid breaking 'backref' option of hyperref package
+\usepackage{float}
+\usepackage{units}				  % semantically represent numbers with units
+\usepackage{url}
+%\usepackage{chapterbib}
 
 %%%%%%%
 % Tikz/PGF
@@ -45,6 +53,7 @@
 \usetikzlibrary{topaths}
 
 \usepackage{pgf}
+
 %%%%%%%%%%%%
 % Theorems & Math & Algorithms
 %%%%%%%%%%%%
@@ -65,31 +74,38 @@
 %%%%%%%%%%%%
 \usepackage[procnames]{listings} % beautiful listings
 
+%%%%%%%
+% Plots
+%%%%%%%
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.5}
+
 %%%%%%%%%%%%
-% Other packages we can use
+% Other packages we use
 %%%%%%%%%%%%
-\usepackage[english]{babel}    % language
-\usepackage[mathcal]{euscript} % For caligraphy fonts
-\usepackage{forloop}		       % For-loops!
-\usepackage[numbers,sort&compress]{natbib} % Sort numerical keys for multiple cites
-\usepackage{hypernat}       % Avoid breaking 'backref' option of hyperref package
-\usepackage{float}
-%\usepackage[dvipsnames]{color}   % named colors
-\usepackage{units}				  % semantically represent numbers with units
-\usepackage{url}
-%\usepackage{chapterbib}
-% Use notes as comments in thesis
+
+% For comments:
+% Use notes/todonotes for comments
 \usepackage{xargs}  % Use more than one optional parameter in a new commands
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
 \newcommandx{\notes}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
-% used first time a new concept is introduced
-\newcommand\concept[1]{{\em #1}}
+
+% Use com for comments
+\usepackage{comment}
+\newcommand{\com}[1]{
+        \mbox{}
+       \marginpar{\hrule\footnotesize\raggedright\hspace{0pt}#1\vspace{2mm}}
+}
 
 %
-% Chapter Style Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+% Chapter Style Options for fncychap package:
+% Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 %\usepackage[Bjornstrup]{fncychap}
 %
-\usepackage{titlesec} % Chapter Style Setup:
+
+% Chapter Style Setup:
+\usepackage{titlesec}
 \newcommand*\HUGE{\Huge}
 \newcommand*\chapnamefont{\normalfont\color{blue}\LARGE\MakeUppercase}
 \newcommand*\chapnumfont{\normalfont\color{blue}\HUGE}
@@ -131,6 +147,7 @@
 \newcommand{\aref}[1]{\autoref{#1}} % Enable links
 
 \usepackage{pdfcomment} % A user-friendly interface to pdf annotations
+
 %
 % Set fancy page header using fancyhdr package
 %
