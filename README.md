@@ -3,6 +3,8 @@ Introduction
 
 Sample latex for PhD dissertations.
 
+Update Latex to the latest version first.
+
 Compiling
 =========
 
