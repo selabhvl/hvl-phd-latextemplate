@@ -88,7 +88,8 @@
 % For comments:
 % Use notes/todonotes for comments
 \usepackage{xargs}  % Use more than one optional parameter in a new commands
-\usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
+\usepackage[colorinlistoftodos,prependcaption,textsize=small,textwidth=2cm]{todonotes}
+\setlength{\marginparwidth}{2cm}
 \newcommandx{\notes}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
 
 % Use com for comments
