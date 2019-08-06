@@ -109,9 +109,9 @@
 % Chapter Style Setup:
 \usepackage{titlesec}
 \newcommand*\HUGE{\Huge}
-\newcommand*\chapnamefont{\normalfont\color{blue}\LARGE\MakeUppercase}
+\newcommand*\chapnamefont{\itshape\color{blue}\HUGE\MakeUppercase}
 \newcommand*\chapnumfont{\normalfont\color{blue}\HUGE}
-\newcommand*\chaptitlefont{\normalfont\HUGE\bfseries}
+\newcommand*\chaptitlefont{\normalfont\huge\bfseries}
 
 \newlength\beforechapskip
 \newlength\midchapskip
@@ -135,6 +135,13 @@
 \titlespacing*{\chapter}
   {0pt}{40pt}{40pt}
 
+% Section Style Setup:                                                 
+\titleformat*{\section}{\LARGE\bfseries}   
+\titleformat*{\subsection}{\Large\bfseries}   
+\titleformat*{\subsubsection}{\large\bfseries}                   
+\titleformat*{\paragraph}{\normalsize\itshape\bfseries}   
+\titleformat*{\subparagraph}{\normalsize\scshape\bfseries} 
+  
 %
 % The hyperref package allows advanced hyperlinking functionality
 %
