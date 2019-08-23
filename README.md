@@ -33,8 +33,11 @@ It is possible to change the pdf-viewer by changing the $pdf_previewer variable
 in the configuration file "latexmkrc".
 
 * To clean up the generated files, run the command
+
 `> make clean`
 
 * Other possible ways to use Latex and compile
-** [TeXstudio](https://www.texstudio.org/)
-** [Using Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726)
+
+1. [TeXstudio](https://www.texstudio.org/)
+
+2. [Using Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726)
