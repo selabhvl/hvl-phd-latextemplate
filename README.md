@@ -3,7 +3,12 @@ Introduction
 
 Sample latex for PhD dissertations.
 
-Update Latex to the latest version first.
+* Install TeX document production system (Latex)
+To get the TeX document production system, one easy way is to download [TeX Live](https://www.tug.org/texlive/).
+
+* Update Latex
+If you already have Latex (Tex Live) in your machine,
+then it to the latest version first.
 
 Compiling
 =========
@@ -11,21 +16,25 @@ Compiling
 The project uses the latexmk script to compile the latex to pdf, and a makefile
 is enclosed to make compilation easier.
 
-To generate the main pdf file, simply run the command
+* To generate the main pdf file, simply run the command
 
-> make
+`> make`
 
 This should, if everything is set up correctly, generate thesis.pdf
 
-It is also possible to run latexmk in "continuous mode", such that the pdf file
+* It is also possible to run latexmk in "continuous mode", such that the pdf file
 is recreated every time the sources change. Continuous mode can be obtained by
 running the command
 
-> make cont
+`> make cont`
 
 This should generate thesis.pdf and open the file using the pdf-viewer okular in Linux.
 It is possible to change the pdf-viewer by changing the $pdf_previewer variable
 in the configuration file "latexmkrc".
 
-To clean up the generated files, run the command
-> make clean
+* To clean up the generated files, run the command
+`> make clean`
+
+* Other possible ways to use Latex and compile
+** [TeXstudio](https://www.texstudio.org/)
+** [Using Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726)
