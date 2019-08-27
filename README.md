@@ -41,3 +41,5 @@ in the configuration file "latexmkrc".
 1. [TeXstudio](https://www.texstudio.org/)
 
 2. [Using Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726)
+
+3. [vim/nvim](https://yufanlu.net/2018/09/03/neovim-latex/)
