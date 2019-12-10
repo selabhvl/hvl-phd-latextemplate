@@ -75,29 +75,29 @@
 %%%%%%%%%%%%
 \usepackage[procnames]{listings} % beautiful listings
 % some basic setups below as an example
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codemauve}{rgb}{0.58,0,0.82}
 \lstdefinestyle{codestyle}{ %
+        basicstyle=\ttfamily\small,
         keywordstyle=\color{blue},
-        stringstyle=\color{codemauve},
-        commentstyle=\color{codegreen},
+        stringstyle=\color{magenta},
+        morecomment=[l][\color{ForestGreen}]{//},
+        morecomment=[s][\color{ForestGreen}]{/*}{*/},
+        commentstyle=\color{olive},
         backgroundcolor=\color{white},
-        basicstyle=\footnotesize,
         breakatwhitespace=false,
         breaklines=true,
         captionpos=b,
         keepspaces=true,
         frame=single,
-        %numbers=left,
-        %numbersep=5pt,
-        %numberstyle=\small\color{codegray},
         showspaces=false,
         showstringspaces=false,
         showtabs=false,
-        tabsize=2
+        tabsize=2,
+        columns=fullflexible,
 }
 \lstset{style=codestyle}
+% if need more key words, then use the setup below as an example 
+% with the listing in the latex document together at the same place. 
+%\lstset{morekeywords={struct, chan, int, func, const, interface, type}}
 
 %%%%%%%
 % Plots
