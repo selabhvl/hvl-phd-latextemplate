@@ -43,10 +43,11 @@ in the configuration file "latexmkrc".
 2. [Using Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726)
 
 3. vim/nvim
-  a. [Install NeoVim and Plugins with vim-plug](https://www.linode.com/docs/tools-reference/tools/how-to-install-neovim-and-plugins-with-vim-plug/)
+
+      a. [Install NeoVim and Plugins with vim-plug](https://www.linode.com/docs/tools-reference/tools/how-to-install-neovim-and-plugins-with-vim-plug/)
   
-  b. [Setup Neovim for Latex](https://yufanlu.net/2018/09/03/neovim-latex/)
+      b. [Setup Neovim for Latex](https://yufanlu.net/2018/09/03/neovim-latex/)
   
-  c. [Awesome vim plugins for writers](https://opensource.com/article/17/2/vim-plugins-writers)
+      c. [Awesome vim plugins for writers](https://opensource.com/article/17/2/vim-plugins-writers)
   
-  d. [10 Vim Plugins for Writing](https://dev.to/tomfern/10-vim-plugins-for-writing-2k66)
+      d. [10 Vim Plugins for Writing](https://dev.to/tomfern/10-vim-plugins-for-writing-2k66)
