@@ -84,6 +84,7 @@
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 \usepackage[inline]{enumitem}
+<<<<<<< HEAD
 
 % Font size and spacing
 \newcommand{\algfontsize}{\footnotesize}
@@ -108,10 +109,36 @@
     \@esphack
 }
 
+=======
+>>>>>>> c925bfb123813f41085e3a1321c5deb3c652d017
 %%%%%%%%%%%%
 % Listings
 %%%%%%%%%%%%
 \usepackage[procnames]{listings} % beautiful listings
+% some basic setups below as an example
+\lstdefinestyle{codestyle}{ %
+        basicstyle=\ttfamily\small,
+        keywordstyle=\color{blue},
+        stringstyle=\color{magenta},
+        morecomment=[l][\color{ForestGreen}]{//},
+        morecomment=[s][\color{ForestGreen}]{/*}{*/},
+        commentstyle=\color{olive},
+        backgroundcolor=\color{white},
+        breakatwhitespace=false,
+        breaklines=true,
+        captionpos=b,
+        keepspaces=true,
+        frame=single,
+        showspaces=false,
+        showstringspaces=false,
+        showtabs=false,
+        tabsize=2,
+        columns=fullflexible,
+}
+\lstset{style=codestyle}
+% if need more key words, then use the setup below as an example 
+% with the listing in the latex document together at the same place. 
+%\lstset{morekeywords={struct, chan, int, func, const, interface, type}}
 
 %%%%%%%
 % Plots
