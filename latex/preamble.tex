@@ -3,13 +3,21 @@
 %%%%%%%%%%%%%%%%%%
 % Font settings
 %%%%%%%%%%%%%%%%%%
+\usepackage[scaled]{berasans}
+\usepackage[scaled]{beramono}
+\usepackage{tgpagella}
+\usepackage[T1,euler-digits]{eulervm}
 \usepackage[T1]{fontenc}	  % Activate Type 1 fonts
-\usepackage{mathptmx}       % Use Times font, also for math
-\usepackage[scaled]{helvet} % for sans serif fonts (\textsf{...} or \sffamiliy)
-\usepackage{sectsty}        % Change section and chapter header
-\allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont} % Set chapter/section header to narrow
 \usepackage[utf8]{inputenc} % We want æøå
-\usepackage[mathcal]{euscript} % For caligraphy fonts
+\usepackage{sectsty}        % Change section and chapter header
+%\usepackage[scaled]{beraserif}
+%\usepackage[scaled]{helvet} % for sans serif fonts (\textsf{...} or \sffamiliy)
+%\usepackage[mathcal]{euscript} % For caligraphy fonts
+%\usepackage{mathptmx}       % Use Times font, also for math
+%\usepackage{newpxtext,newpxmath} New PX font
+%\allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont} % Set chapter/section header to narrow
+%\usepackage{mathptmx}       % Use Times font, also for math
+%\usepackage[mathcal]{euscript} % For caligraphy fonts
 
 %%%%%%%%%%%%%%%%%%
 % General packages
@@ -22,8 +30,7 @@
 \usepackage{bmpsize}    % Handles figures
 \usepackage{subcaption}
 \usepackage{wrapfig}
-\usepackage{xcolor}     % Handles colors
-\usepackage{color,soul}
+\usepackage[dvipsnames]{xcolor}     % Handles colors
 \usepackage{setspace}   % Easy setting of line spacing
 % Change the default alignment of a image from left or right an easy manner:
 \usepackage[export]{adjustbox}
@@ -32,6 +39,12 @@
 \usepackage{epstopdf}
 \usepackage{multirow,multicol}
 \usepackage{array}
+% caption for figures
+\usepackage{caption}
+\captionsetup[figure]{labelfont={bf},labelformat={default},labelsep=colon,name={Fig.}}
+\captionsetup[table]{labelfont={bf},labelformat={default},labelsep=colon,name={Table}}
+\captionsetup{compatibility=false}
+\usepackage{alltt}
 \usepackage{forloop}		       % For-loops!
 \usepackage[numbers,sort&compress]{natbib} % Sort numerical keys for multiple cites
 \usepackage{hypernat}       % Avoid breaking 'backref' option of hyperref package
@@ -59,6 +72,7 @@
 % Theorems & Math & Algorithms
 %%%%%%%%%%%%
 \usepackage{amsthm}
+\newtheorem{definition}{Definition}
 \usepackage{thmtools}
 
 \usepackage{amsmath}
@@ -69,6 +83,30 @@
 
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
+\usepackage[inline]{enumitem}
+
+% Font size and spacing
+\newcommand{\algfontsize}{\footnotesize}
+\newcommand{\algcommentfontsize}{\scriptsize}
+\newcommand{\algtypefontsize}{\scriptsize}
+\newcommand{\algospacing}{\vspace{\baselineskip}}
+
+% New definition: Switch/Case
+\algnewcommand\algorithmicswitch{\textbf{switch}}
+\algnewcommand\algorithmiccase{\textbf{case}}
+% New "environments"
+\algdef{SE}[SWITCH]{Switch}{EndSwitch}[1]{\algorithmicswitch\ #1\ \algorithmicdo}{\algorithmicend\ \algorithmicswitch}%
+\algdef{SE}[CASE]{Case}{EndCase}[1]{\algorithmiccase\ #1}{\algorithmicend\ \algorithmiccase}%
+\algtext*{EndSwitch}%
+\algtext*{EndCase}%
+
+\newcommand{\funclabel}[1]{%
+    \@bsphack
+    \protected@write\@auxout{}{%
+        \string\newlabel{#1}{{\jayden@currentfunction}{\thepage}}%
+    }%
+    \@esphack
+}
 
 %%%%%%%%%%%%
 % Listings
@@ -136,9 +174,9 @@
   {0pt}{40pt}{40pt}
 
 % Section Style Setup:                                                 
-\titleformat*{\section}{\LARGE\bfseries}   
-\titleformat*{\subsection}{\Large\bfseries}   
-\titleformat*{\subsubsection}{\large\bfseries}                   
+\titleformat*{\section}{\fontsize{18}{20}\bfseries}   
+\titleformat*{\subsection}{\fontsize{16}{18}\bfseries}   
+\titleformat*{\subsubsection}{\fontsize{14}{16}\bfseries}                  
 \titleformat*{\paragraph}{\normalsize\itshape\bfseries}   
 \titleformat*{\subparagraph}{\normalsize\scshape\bfseries} 
   
@@ -155,8 +193,7 @@
 %\newcommand{\aref}[1]{\autoref*{#1}} % Prevent links
 \newcommand{\aref}[1]{\autoref{#1}} % Enable links
 
-\usepackage{pdfcomment} % A user-friendly interface to pdf annotations
-
+%\usepackage{pdfcomment} % A user-friendly interface to pdf annotations
 %
 % Set fancy page header using fancyhdr package
 %
