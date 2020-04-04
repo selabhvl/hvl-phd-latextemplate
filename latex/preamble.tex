@@ -171,8 +171,8 @@
 % Chapter Style Setup:
 \usepackage{titlesec}
 \newcommand*\HUGE{\Huge}
-\newcommand*\chapnamefont{\itshape\color{blue}\HUGE\MakeUppercase}
-\newcommand*\chapnumfont{\normalfont\color{blue}\HUGE}
+\newcommand*\chapnamefont{\itshape\color{RoyalBlue}\HUGE\MakeUppercase}
+\newcommand*\chapnumfont{\normalfont\color{RoyalBlue}\HUGE}
 \newcommand*\chaptitlefont{\normalfont\huge\bfseries}
 
 \newlength\beforechapskip
@@ -186,7 +186,7 @@
 \titleformat{\chapter}[display]
   {\normalfont\filleft}
   {{\chapnamefont\chaptertitlename}%
-    \makebox[36pt][l]{\color{blue}\hspace{.001em}%
+    \makebox[36pt][l]{\color{RoyalBlue}\hspace{.001em}%
       \resizebox{!}{\beforechapskip}{\chapnumfont\thechapter}%
       \hspace{.001em}%
       \rule{\midchapskip}{\beforechapskip}%
@@ -207,12 +207,19 @@
 %
 % The hyperref package allows advanced hyperlinking functionality
 %
+\definecolor{CTurl}{named}{Maroon} % Maroon
+\definecolor{CTcitation}{named}{OliveGreen} % WebGreen
+\definecolor{CTlink}{named}{RoyalBlue} % RoyalBlue {cmyk}{1, 0.50, 0, 0}
+
 \usepackage[%dvipdfmx,        % Use dvipdf driver
 			backref,         % List citing occurences in the References
-			colorlinks,      % Colored links
-			citecolor=blue,  % Color of cite links
-			linkcolor=blue,  % Color of links
-			urlcolor=blue,   % Color of urls
+			colorlinks=true, % Colored links
+            linktocpage=true,
+            breaklinks=true,
+            pageanchor=true,
+            citecolor=CTcitation,  % Color of cite links
+            linkcolor=CTlink,  % Color of links
+            urlcolor=CTurl,   % Color of urls
 			]{hyperref}
 %\newcommand{\aref}[1]{\autoref*{#1}} % Prevent links
 \newcommand{\aref}[1]{\autoref{#1}} % Enable links
