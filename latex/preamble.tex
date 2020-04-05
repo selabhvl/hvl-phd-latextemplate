@@ -38,6 +38,7 @@
 \usepackage{float}
 \usepackage{units}				  % semantically represent numbers with units
 \usepackage{url}
+\usepackage{tocloft}        % controlling the typographic design of the Table of Contents
 \usepackage[acronym,toc]{glossaries}  % nice macros for handling all acronyms in the thesis
 %\usepackage{chapterbib}
 
@@ -150,12 +151,11 @@
        \marginpar{\hrule\footnotesize\raggedright\hspace{0pt}#1\vspace{2mm}}
 }
 
-%
-% Chapter Style Options for fncychap package:
-% Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
-%\usepackage[Bjornstrup]{fncychap}
-%
 
+% ToC setting for parts 
+\renewcommand{\cftpartfont}{\bfseries\color{Maroon}\large} 
+%
+%
 % Chapter Style Setup:
 \usepackage{titlesec}
 \newcommand*\HUGE{\Huge}
