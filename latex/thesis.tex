@@ -7,9 +7,9 @@
 % We use the book class
 %
 \ifcompileiliad
-	\documentclass[10pt]{book}
+	\documentclass[10pt]{book} % ebook
 \else
-	\documentclass[12pt]{book} % Default, based on settings
+	\documentclass[12pt]{book} % Default is book 12 pt regular A4 based on setting file
 \fi
 
 %
@@ -25,8 +25,8 @@
 				bmargin=0.4cm,
 				dvips]
 				{geometry}
-\else %Default, based on settings
-	\usepackage[paper = a4paper,   %To be shrunk to 80% when printed
+\else % Default regular A4, based on setting file 
+	\usepackage[paper = a4paper,         %To be shrunk to 80% when printed
 				twoside,                 %Two-side mode, switches margins on
 				bindingoffset = 2mm,     %Offset for binding side of page
 				hmargin = 25mm,          %Left and right margin
@@ -35,15 +35,20 @@
 				{geometry}
 \fi
 
+
+%*******************************************************
+% Note: Make all your adjustments in here
+%*******************************************************
 %
 % Include all packages
 %
 \include{preamble}
-
 %
 % Include user-defined macros
 %
 \include{macros}
+%
+%
 
 % if need generate pdf based on a selected page range such as page 31-40:
 %\usepackage[31-40]{pagesel}
@@ -55,7 +60,10 @@
 %
 %\headheight 30pt
 
-%
+
+%*******************************************************
+% Hyphenation
+%*******************************************************
 % TeX is very proud of its hyphenation engine, to the point where it
 % hyphenates _everything_ just to show off.  Increasing penalty for
 % hyphenation, and increase tolerance for underfull boxes can make
@@ -92,22 +100,23 @@
 %\nocite{*}
 
 %Set the fontsize and baselineskip, if something other than 10 or 12 is required,
-%(default is 13pt based on UiB standard in setting)
+%(default is 13pt based on UiB standard in setting file)
 \ifDownscaledFinalDoc
 	\fontsize{\TextSize}{\BaseLineSkip}
 	\selectfont
 \fi
 
-%Double line spacing for draft
-\ifDraft
-	\doublespacing
+%Double line spacing for draft (default is false in setting file)
+\ifDraft              
+	\doublespacing   
 \fi
 
 
-%--------------------------------------------------------------------------------------------------
-% FRONT MATTER
-%--------------------------------------------------------------------------------------------------
+%*******************************************************
+% Maketitle & back page
+%*******************************************************
 \maketitle
+\thispagestyle{empty}
 \normalsize\vspace*{15cm}
 \begin{minipage}{13cm}
 Doctoral Dissertation at Western Norway University of Applied Sciences\\
@@ -118,19 +127,26 @@ Printed by ...\\
 Bergen, Norway
 \end{minipage}
 
-\frontmatter
+%*******************************************************
+% Dedication
+%*******************************************************
 \include{preface/dedication}
+
+%*******************************************************
+% Frontmatter
+%*******************************************************
+\frontmatter
 \include{preface/preface}
 \include{preface/scientific_environment}
 \include{preface/acknowledgements}
 \include{preface/abstract}
 \include{preface/listofpublications}
 \tableofcontents
-%--------------------------------------------------------------------------------------------------
-% MAIN MATTER
-%--------------------------------------------------------------------------------------------------
-\mainmatter
 
+%*******************************************************
+% Mainmatter
+%*******************************************************
+\mainmatter
 %
 % Main chapters
 %
@@ -155,18 +171,19 @@ Bergen, Norway
 \part{Scientific Contributions}
 \label{part:2}
 \include{papers}  % The papers, with cover pages
-%
-% Appendices
-%
+
+% ******************************************************
+% Backmatter
+%*******************************************************
+% Appendices if need
 %\appendix
-%\include{appendixA}             % Appendix A: Something
+%\include{appendixA}   % Appendix A: Something
 \listoffigures
 \lstlistoflistings
 \listoftables
 
-%--------------------------------------------------------------------------------------------------
-% BACK MATTER
-%--------------------------------------------------------------------------------------------------
 \backmatter
-
+% ******************************************************
+% Game Over: Restore, Restart, or Quit?
+%*******************************************************
 \end{document}

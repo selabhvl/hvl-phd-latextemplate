@@ -1,41 +1,28 @@
-%!TEX root = ./thesis.tex
+%!TEX root = ./thesis.tex 
+%%%%%%%%%%%%%%%%%% % Font settings %%%%%%%%%%%%%%%%%% 
+\usepackage[scaled]{berasans} 
+\usepackage[scaled]{beramono} 
+\usepackage{tgpagella} 
+\usepackage[T1,euler-digits]{eulervm} 
+\usepackage[T1]{fontenc}	  % Activate Type 1 fonts 
+\usepackage[utf8]{inputenc} % We want æøå 
+\usepackage{sectsty}        % Change section and chapter header 
 
-%%%%%%%%%%%%%%%%%%
-% Font settings
-%%%%%%%%%%%%%%%%%%
-\usepackage[scaled]{berasans}
-\usepackage[scaled]{beramono}
-\usepackage{tgpagella}
-\usepackage[T1,euler-digits]{eulervm}
-\usepackage[T1]{fontenc}	  % Activate Type 1 fonts
-\usepackage[utf8]{inputenc} % We want æøå
-\usepackage{sectsty}        % Change section and chapter header
-%\usepackage[scaled]{beraserif}
-%\usepackage[scaled]{helvet} % for sans serif fonts (\textsf{...} or \sffamiliy)
-%\usepackage[mathcal]{euscript} % For caligraphy fonts
-%\usepackage{mathptmx}       % Use Times font, also for math
-%\usepackage{newpxtext,newpxmath} New PX font
-%\allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont} % Set chapter/section header to narrow
-%\usepackage{mathptmx}       % Use Times font, also for math
-%\usepackage[mathcal]{euscript} % For caligraphy fonts
 
-%%%%%%%%%%%%%%%%%%
-% General packages
-%%%%%%%%%%%%%%%%%%
-\usepackage[english]{babel}    % language
-\usepackage{xspace}
-\usepackage{verbatim}   % at least use begin{comment} end{comment}
-\usepackage{booktabs}   % Publication quality tables
-\usepackage{graphicx}
-\usepackage{bmpsize}    % Handles figures
-\usepackage{subcaption}
-\usepackage{wrapfig}
-\usepackage[dvipsnames]{xcolor}     % Handles colors
-\usepackage{setspace}   % Easy setting of line spacing
-% Change the default alignment of a image from left or right an easy manner:
-\usepackage[export]{adjustbox}
-\usepackage[final]{pdfpages}
-\pdfminorversion=7      % Raise the version of PDF to 1.7
+%%%%%%%%%%%%%%%%%% % General packages %%%%%%%%%%%%%%%%%% 
+\usepackage[english]{babel}    % language 
+\usepackage{xspace} 
+\usepackage{verbatim}   % at least use begin{comment} end{comment} 
+\usepackage{booktabs}   % Publication quality tables 
+\usepackage{graphicx} 
+\usepackage{bmpsize}    % Handles figures 
+\usepackage{subcaption} 
+\usepackage{wrapfig} 
+\usepackage[dvipsnames]{xcolor}     % Handles colors 
+\usepackage{setspace}   % Easy setting of line spacing Change the default alignment of a image from left or right an easy manner: 
+\usepackage[export]{adjustbox} 
+\usepackage[final]{pdfpages} 
+\pdfminorversion=7      % Raise the version of PDF to 1.7 
 \usepackage{epstopdf}
 \usepackage{multirow,multicol}
 \usepackage{array}
@@ -51,6 +38,7 @@
 \usepackage{float}
 \usepackage{units}				  % semantically represent numbers with units
 \usepackage{url}
+\usepackage[acronym,toc]{glossaries}  % nice macros for handling all acronyms in the thesis
 %\usepackage{chapterbib}
 
 %%%%%%%
@@ -215,7 +203,6 @@
 			backref,         % List citing occurences in the References
 			colorlinks=true, % Colored links
             linktocpage=true,
-            breaklinks=true,
             pageanchor=true,
             citecolor=CTcitation,  % Color of cite links
             linkcolor=CTlink,  % Color of links
