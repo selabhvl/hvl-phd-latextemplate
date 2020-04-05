@@ -8,7 +8,6 @@
 \usepackage[utf8]{inputenc} % We want æøå 
 \usepackage{sectsty}        % Change section and chapter header 
 
-
 %%%%%%%%%%%%%%%%%% % General packages %%%%%%%%%%%%%%%%%% 
 \usepackage[english]{babel}    % language 
 \usepackage{xspace} 
@@ -22,7 +21,7 @@
 \usepackage{setspace}   % Easy setting of line spacing Change the default alignment of a image from left or right an easy manner: 
 \usepackage[export]{adjustbox} 
 \usepackage[final]{pdfpages} 
-\pdfminorversion=7      % Raise the version of PDF to 1.7 
+%\pdfminorversion=7      % Raise the version of PDF to 1.7 
 \usepackage{epstopdf}
 \usepackage{multirow,multicol}
 \usepackage{array}
@@ -153,15 +152,26 @@
 
 
 % ToC setting for parts 
-\renewcommand{\cftpartfont}{\bfseries\color{Maroon}\large} 
+\renewcommand{\cftpartfont}{\bfseries\color{Maroon}\large}
+% ToC setting for chapters
+\renewcommand{\cftchappresnum}{\bfseries}%
+\renewcommand{\cftchappagefont}{\normalfont}%
+% ToC setting for sections
+\renewcommand{\cftsecpresnum}{\scshape}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+% Toc setting for subsections
+\renewcommand{\cftsubsecpresnum}{\scshape}
+\renewcommand{\cftsubsecfont}{\normalfont}
+\renewcommand{\cftsubsecpagefont}{\normalfont}
 %
 %
 % Chapter Style Setup:
 \usepackage{titlesec}
 \newcommand*\HUGE{\Huge}
 \newcommand*\chapnamefont{\itshape\color{RoyalBlue}\HUGE\MakeUppercase}
-\newcommand*\chapnumfont{\normalfont\color{RoyalBlue}\HUGE}
-\newcommand*\chaptitlefont{\normalfont\huge\bfseries}
+\newcommand*\chapnumfont{\bfseries\color{RoyalBlue}\HUGE}
+\newcommand*\chaptitlefont{\bfseries\huge}
 
 \newlength\beforechapskip
 \newlength\midchapskip
