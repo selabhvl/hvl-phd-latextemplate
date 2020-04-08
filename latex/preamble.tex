@@ -1,27 +1,27 @@
 %!TEX root = ./thesis.tex 
-%%%%%%%%%%%%%%%%%% % Font settings %%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%% % Font settings %%%%%%%%%%%%%%%%%%%%% 
 \usepackage[scaled]{berasans} 
 \usepackage[scaled]{beramono} 
 \usepackage{tgpagella} 
 \usepackage[T1,euler-digits]{eulervm} 
-\usepackage[T1]{fontenc}	  % Activate Type 1 fonts 
-\usepackage[utf8]{inputenc} % We want æøå 
-\usepackage{sectsty}        % Change section and chapter header 
+\usepackage[T1]{fontenc}	    % Activate Type 1 fonts 
+\usepackage[utf8]{inputenc}     % We want æøå 
+\usepackage{sectsty}            % Change section and chapter header 
 
 %%%%%%%%%%%%%%%%%% % General packages %%%%%%%%%%%%%%%%%% 
 \usepackage[english]{babel}    % language 
 \usepackage{xspace} 
-\usepackage{verbatim}   % at least use begin{comment} end{comment} 
-\usepackage{booktabs}   % Publication quality tables 
+\usepackage{verbatim}          % at least use begin{comment} end{comment} 
+\usepackage{booktabs}          % Publication quality tables 
 \usepackage{graphicx} 
-\usepackage{bmpsize}    % Handles figures 
+\usepackage{bmpsize}           % Handles figures 
 \usepackage{subcaption} 
 \usepackage{wrapfig} 
 \usepackage[dvipsnames]{xcolor}     % Handles colors 
-\usepackage{setspace}   % Easy setting of line spacing Change the default alignment of a image from left or right an easy manner: 
+\usepackage{setspace}               % Easy setting of line spacing Change the default alignment of a image from left or right an easy manner: 
 \usepackage[export]{adjustbox} 
 \usepackage[final]{pdfpages} 
-%\pdfminorversion=7      % Raise the version of PDF to 1.7 
+%\pdfminorversion=7                 % Raise the version of PDF to 1.7 if needed
 \usepackage{epstopdf}
 \usepackage{multirow,multicol}
 \usepackage{array}
@@ -31,19 +31,18 @@
 \captionsetup[table]{labelfont={bf},labelformat={default},labelsep=colon,name={Table}}
 \captionsetup{compatibility=false}
 \usepackage{alltt}
-\usepackage{forloop}		       % For-loops!
+\usepackage{forloop}		        % For-loops!
 \usepackage[numbers,sort&compress]{natbib} % Sort numerical keys for multiple cites
-\usepackage{hypernat}       % Avoid breaking 'backref' option of hyperref package
+\usepackage{hypernat}               % Avoid breaking 'backref' option of hyperref package
 \usepackage{float}
-\usepackage{units}				  % semantically represent numbers with units
+\usepackage{units}				    % semantically represent numbers with units
 \usepackage{url}
-\usepackage{tocloft}        % controlling the typographic design of the Table of Contents
-\usepackage[acronym,toc]{glossaries}  % nice macros for handling all acronyms in the thesis
-%\usepackage{chapterbib}
+\usepackage{tocloft}                % controlling the typographic design of the Table of Contents
+\usepackage[acronym,toc]{glossaries}       % nice macros for handling all acronyms in the thesis
 
-%%%%%%%
+%%%%%%%%%%%
 % Tikz/PGF
-%%%%%%%
+%%%%%%%%%%%
 \usepackage{tikz}
 \usetikzlibrary{positioning,shapes.geometric}
 \usetikzlibrary{arrows,automata,positioning}
@@ -56,9 +55,9 @@
 
 \usepackage{pgf}
 
-%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Theorems & Math & Algorithms
-%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amsthm}
 \newtheorem{definition}{Definition}
 \usepackage{thmtools}
@@ -103,7 +102,7 @@
 % some basic setups below as an example
 \lstdefinestyle{codestyle}{ %
         basicstyle=\ttfamily\small,
-        keywordstyle=\color{blue},
+        keywordstyle=\color{RoyalBlue},
         stringstyle=\color{magenta},
         morecomment=[l][\color{ForestGreen}]{//},
         morecomment=[s][\color{ForestGreen}]{/*}{*/},
@@ -125,17 +124,16 @@
 % with the listing in the latex document together at the same place. 
 %\lstset{morekeywords={struct, chan, int, func, const, interface, type}}
 
-%%%%%%%
+%%%%%%%%
 % Plots
-%%%%%%%
+%%%%%%%%
 \usepackage{pgfplots}
 \usepgfplotslibrary{groupplots}
 \pgfplotsset{compat=1.5}
 
-%%%%%%%%%%%%
-% Other packages we use
-%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%
+% comments and notes 
+%%%%%%%%%%%%%%%%%%%%%
 % For comments:
 % Use notes/todonotes for comments
 \usepackage{xargs}  % Use more than one optional parameter in a new commands
@@ -143,13 +141,9 @@
 \setlength{\marginparwidth}{2cm}
 \newcommandx{\notes}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
 
-% Use com for comments
-\usepackage{comment}
-\newcommand{\com}[1]{
-        \mbox{}
-       \marginpar{\hrule\footnotesize\raggedright\hspace{0pt}#1\vspace{2mm}}
-}
-
+%%%%%%%%%%%%%%%%%%%%%%%%
+% font settings  
+%%%%%%%%%%%%%%%%%%%%%%%%
 
 % ToC setting for parts 
 \renewcommand{\cftpartfont}{\bfseries\color{Maroon}\large}
@@ -164,9 +158,10 @@
 \renewcommand{\cftsubsecpresnum}{\scshape}
 \renewcommand{\cftsubsecfont}{\normalfont}
 \renewcommand{\cftsubsecpagefont}{\normalfont}
-%
-%
-% Chapter Style Setup:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter Style Setup
+%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{titlesec}
 \newcommand*\HUGE{\Huge}
 \newcommand*\chapnamefont{\itshape\color{RoyalBlue}\HUGE\MakeUppercase}
@@ -195,33 +190,37 @@
 \titlespacing*{\chapter}
   {0pt}{40pt}{40pt}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%
 % Section Style Setup:                                                 
+%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat*{\section}{\fontsize{18}{20}\bfseries}   
 \titleformat*{\subsection}{\fontsize{16}{18}\bfseries}   
 \titleformat*{\subsubsection}{\fontsize{14}{16}\bfseries}                  
 \titleformat*{\paragraph}{\normalsize\itshape\bfseries}   
 \titleformat*{\subparagraph}{\normalsize\scshape\bfseries} 
-  
-%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hyperref Setup
+%%%%%%%%%%%%%%%%%%%%%%%%
 % The hyperref package allows advanced hyperlinking functionality
 %
-\definecolor{CTurl}{named}{Maroon} % Maroon
+\definecolor{CTurl}{named}{Maroon}          % Maroon
 \definecolor{CTcitation}{named}{OliveGreen} % WebGreen
-\definecolor{CTlink}{named}{RoyalBlue} % RoyalBlue {cmyk}{1, 0.50, 0, 0}
+\definecolor{CTlink}{named}{RoyalBlue}      % RoyalBlue {cmyk}{1, 0.50, 0, 0}
 
-\usepackage[%dvipdfmx,        % Use dvipdf driver
-			backref,         % List citing occurences in the References
-			colorlinks=true, % Colored links
+\usepackage[backref,                        % List citing occurences in the References
+			colorlinks=true,                % Colored links
             linktocpage=true,
             pageanchor=true,
-            citecolor=CTcitation,  % Color of cite links
-            linkcolor=CTlink,  % Color of links
-            urlcolor=CTurl,   % Color of urls
+            citecolor=CTcitation,           % Color of cite links
+            linkcolor=CTlink,               % Color of links
+            urlcolor=CTurl,                 % Color of urls
 			]{hyperref}
-%\newcommand{\aref}[1]{\autoref*{#1}} % Prevent links
 \newcommand{\aref}[1]{\autoref{#1}} % Enable links
 
-%\usepackage{pdfcomment} % A user-friendly interface to pdf annotations
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page Setup
+%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Set fancy page header using fancyhdr package
 %
@@ -244,6 +243,6 @@
 
 % make space for the rule
 \fancypagestyle{plain}{
-	\fancyhead{} %get rid of the headers on plain pages
-	\renewcommand{\headrulewidth}{0pt} % and the line
+	\fancyhead{}                           %get rid of the headers on plain pages
+	\renewcommand{\headrulewidth}{0pt}     % and the line
 }

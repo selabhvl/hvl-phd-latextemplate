@@ -6,12 +6,19 @@
 % Shorthand macros
 %%%%%%%%%%%%%%%%%%
 
+% references macros in .bib files
+\providecommand{\Proc}{Proceedings of the\xspace}
+\providecommand{\IntlConf}{International Conference on\xspace}
+\providecommand{\EuroConf}{European Conference on\xspace}
+\providecommand{\Conf}{Conference on\xspace}
+\providecommand{\IntlSymp}{International Symposium\xspace}
+
 % used for code
 \newcommand{\code}[1]{{\texttt{#1}}}
-% used first time a new concept is introduced
+% font used first time a new concept is introduced
 \newcommand\concept[1]{{\em #1}}
 % used when referencing to names in figures
-\newcommand{\figitem}[1]{\textbf{\textit{#1}}}
+\newcommand{\figitem}[1]{\textbf{\textup{#1}}}
 % referencing to functions
 \newcommand{\func}[1]{function~\textsc{#1}}
 % referencing 
@@ -34,9 +41,9 @@
 \newcommand{\tfinal}{\ensuremath{T_{\text{f}}}}
 \newcommand{\papernum}[1]{\textbf{#1}}
 \newcommand{\etal}{et\,al.}
-\newcommand{\eg}{e.g.\xspace}
-\newcommand{\ie}{i.e.\xspace}
 \newcommand{\cf}{cf.\xspace}
+\newcommand{\eg}{e.\,g., }
+\newcommand{\ie}{i.\,e., }
 
 %
 % used to comment out things
@@ -58,20 +65,20 @@
 \newcommand{\mat}[1]{\ensuremath{\mathbf{#1}}}
 \newcommand{\tildemat}[1]{\ensuremath{\widetilde{\mat{#1}}}}
 
-% Counters
+%% Counters
+%%
+%\newcounter{ct}
 %
-\newcounter{ct}
-
-%
-% For loop to include papers
-%
-\newcommand{\includepaperpages}[2]
-{
-	\forloop{ct}{0}{\value{ct} < #2}
-	{
-		\begin{figure}[ht]
-			\includegraphics[width=.99\textwidth]{#1\the\value{ct}.ps}
-		\end{figure}
-		\clearpage
-	}
-}
+%%
+%% For loop to include all papers for the collection in part two
+%%
+%\newcommand{\includepaperpages}[2]
+%{
+%	\forloop{ct}{0}{\value{ct} < #2}
+%	{
+%		\begin{figure}[ht]
+%			\includegraphics[width=.99\textwidth]{#1\the\value{ct}.ps}
+%		\end{figure}
+%		\clearpage
+%	}
+%}
