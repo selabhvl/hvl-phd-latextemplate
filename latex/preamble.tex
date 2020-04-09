@@ -1,6 +1,5 @@
 %!TEX root = ./thesis.tex 
 %%%%%%%%%%%%%%%%%% % Font settings %%%%%%%%%%%%%%%%%%%%% 
-\usepackage[scaled]{berasans} 
 \usepackage[scaled]{beramono} 
 \usepackage{tgpagella} 
 \usepackage[T1,euler-digits]{eulervm} 
@@ -166,7 +165,7 @@
 \usepackage{titlesec}
 \newcommand*\HUGE{\Huge}
 \newcommand*\chapnamefont{\itshape\color{RoyalBlue}\HUGE\MakeUppercase}
-\newcommand*\chapnumfont{\bfseries\color{RoyalBlue}\HUGE}
+\DeclareFixedFont{\chapterNumber}{U}{eur}{b}{n}{70}
 \newcommand*\chaptitlefont{\bfseries\huge}
 
 \newlength\beforechapskip
@@ -181,7 +180,7 @@
   {\normalfont\filleft}
   {{\chapnamefont\chaptertitlename}%
     \makebox[36pt][l]{\color{RoyalBlue}\hspace{.001em}%
-      \resizebox{!}{\beforechapskip}{\chapnumfont\thechapter}%
+      \resizebox{!}{\beforechapskip}{\chapterNumber\thechapter}%
       \hspace{.001em}%
       \rule{\midchapskip}{\beforechapskip}%
     }%
