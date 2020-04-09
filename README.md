@@ -32,7 +32,7 @@ Both should generate thesis.pdf and open the file using the pdf-viewer.
 The default setting in the Makefile is to use Preview to open thesis.pdf in
 MacOS.
 If, e.g., in Linux, you need to change the Makefile for the pdf-viewer you want
-to use, such as [okular](https://okular.kde.org/) thesis.pdf.
+to use, such as `[okular](https://okular.kde.org/) thesis.pdf`.
 
 * To clean up the generated files, run the command
 
@@ -53,4 +53,5 @@ to use, such as [okular](https://okular.kde.org/) thesis.pdf.
       c. [Awesome vim plugins for writers](https://opensource.com/article/17/2/vim-plugins-writers)
   
       d. [10 Vim Plugins for Writing](https://dev.to/tomfern/10-vim-plugins-for-writing-2k66)
+
       e. To speed up the wirting if there are lots of mathematics: [take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/)
