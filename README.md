@@ -1,7 +1,11 @@
 Introduction
 ============
 
-Sample latex for PhD dissertations.
+Latex template for HVL PhD dissertations.
+
+The template uses the latexmk to compile the latex to pdf by running a makefile enclosed.
+All the default settings of the template are in the preamble.tex and macros.tex.
+
 
 * Install TeX document production system (Latex)
 To get the TeX document production system, one easy way is to download [TeX Live](https://www.tug.org/texlive/).
@@ -13,18 +17,15 @@ then it to the latest version first.
 Compiling
 =========
 
-The project uses the latexmk to compile the latex to pdf, and a makefile
-is enclosed to make compilation easier.
-
-* To generate the main pdf file, simply run the command
+* To generate the main pdf file, you can simply run the command:
 
 `> make`
 
-This should, if everything is set up correctly, generate thesis.pdf
+This should generate the thesis.pdf if everything is set up correctly, 
 
-* It is also possible to run latexmk in "continuous mode", such that the pdf file
-is recreated every time the sources change. Continuous mode can be obtained by
-running the command
+* To run latexmk in "continuous mode" such that the thesis.pdf file
+is recreated every time the sources change after saving. 
+The continuous mode can be executed by running the command:
 
 `> make cont`
 
@@ -34,7 +35,7 @@ MacOS.
 If, e.g., in Linux, you need to change the Makefile for the pdf-viewer you want
 to use, such as [okular](https://okular.kde.org/): `okular thesis.pdf`.
 
-* To clean up the generated files, run the command
+* To clean up the generated files, you can run the command
 
 `> make clean`
 
