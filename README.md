@@ -38,7 +38,7 @@ to use, such as [okular](https://okular.kde.org/): `okular thesis.pdf`.
 
 `> make clean`
 
-* Other possible ways to use Latex and compile
+* Possible ways to use Latex: 
 
 1. [TeXstudio](https://www.texstudio.org/)
 
