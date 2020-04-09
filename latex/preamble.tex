@@ -7,6 +7,7 @@
 \usepackage[T1]{fontenc}	    % Activate Type 1 fonts 
 \usepackage[utf8]{inputenc}     % We want æøå 
 \usepackage{sectsty}            % Change section and chapter header 
+\usepackage{textcomp}
 
 %%%%%%%%%%%%%%%%%% % General packages %%%%%%%%%%%%%%%%%% 
 \usepackage[english]{babel}    % language 
@@ -193,11 +194,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % Section Style Setup:                                                 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\titleformat*{\section}{\fontsize{18}{20}\bfseries}   
-\titleformat*{\subsection}{\fontsize{16}{18}\bfseries}   
-\titleformat*{\subsubsection}{\fontsize{14}{16}\bfseries}                  
-\titleformat*{\paragraph}{\normalsize\itshape\bfseries}   
-\titleformat*{\subparagraph}{\normalsize\scshape\bfseries} 
+% the baselineskip should be 1.2 times the font size  
+\titleformat*{\section}{\fontsize{18}{21.6}\selectfont\bfseries}
+\titleformat*{\subsection}{\fontsize{16}{19.2}\selectfont\bfseries}
+\titleformat*{\subsubsection}{\fontsize{14}{16.8}\selectfont\bfseries}
+\titleformat*{\paragraph}{\normalsize\itshape\bfseries}
+\titleformat*{\subparagraph}{\normalsize\scshape\bfseries}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Hyperref Setup
