@@ -13,7 +13,7 @@ then it to the latest version first.
 Compiling
 =========
 
-The project uses the latexmk script to compile the latex to pdf, and a makefile
+The project uses the latexmk to compile the latex to pdf, and a makefile
 is enclosed to make compilation easier.
 
 * To generate the main pdf file, simply run the command
@@ -28,9 +28,11 @@ running the command
 
 `> make cont`
 
-This should generate thesis.pdf and open the file using the pdf-viewer okular in Linux.
-It is possible to change the pdf-viewer by changing the $pdf_previewer variable
-in the configuration file "latexmkrc".
+Both should generate thesis.pdf and open the file using the pdf-viewer.
+The default setting in the Makefile is to use Preview to open thesis.pdf in
+MacOS.
+If, e.g., in Linux, you need to change the Makefile for the pdf-viewer you want
+to use, such as [okular](https://okular.kde.org/) thesis.pdf.
 
 * To clean up the generated files, run the command
 
@@ -51,3 +53,4 @@ in the configuration file "latexmkrc".
       c. [Awesome vim plugins for writers](https://opensource.com/article/17/2/vim-plugins-writers)
   
       d. [10 Vim Plugins for Writing](https://dev.to/tomfern/10-vim-plugins-for-writing-2k66)
+      e. To speed up the wirting if there are lots of mathematics: [take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/)
