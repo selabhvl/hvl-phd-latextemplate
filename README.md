@@ -6,7 +6,16 @@ Latex template for HVL PhD dissertations.
 The template uses the latexmk to compile the latex to pdf by running a makefile enclosed.
 All the default settings of the template are in the preamble.tex and macros.tex.
 
+The fonts used in the template include:
+1. [Palatino](https://en.wikipedia.org/wiki/Palatino#Palatino) font: [tgpagella](https://tug.org/FontCatalogue/texgyrepagella/)
+   pacakge
 
+2. Typewriter font: [beramono](https://tug.org/FontCatalogue/beramono/) package
+
+3. The Euler-VM fonts for maths (blend well with Palatino): [eulervm)](http://ftp.riken.jp/tex-archive/fonts/eulervm/doc/latex/eulervm/eulervm.pdf) package 
+
+Install/Upate Latest Latex
+========
 * Install TeX document production system (Latex)
 To get the TeX document production system, one easy way is to download [TeX Live](https://www.tug.org/texlive/).
 
