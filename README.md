@@ -12,7 +12,7 @@ The fonts used in the template include:
 
 2. Typewriter font: [beramono](https://tug.org/FontCatalogue/beramono/) package
 
-3. The Euler-VM fonts for maths (blend well with Palatino): [eulervm)](http://ftp.riken.jp/tex-archive/fonts/eulervm/doc/latex/eulervm/eulervm.pdf) package 
+3. The Euler-VM fonts for maths (blend well with Palatino): [eulervm](http://ftp.riken.jp/tex-archive/fonts/eulervm/doc/latex/eulervm/eulervm.pdf) package 
 
 Install/Upate Latest Latex
 ========
