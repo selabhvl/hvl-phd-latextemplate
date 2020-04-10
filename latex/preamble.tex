@@ -7,6 +7,9 @@
 \usepackage[utf8]{inputenc}     % We want æøå 
 \usepackage{sectsty}            % Change section and chapter header 
 \usepackage{textcomp}
+\usepackage{anyfontsize}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{textcase}
 
 %%%%%%%%%%%%%%%%%% % General packages %%%%%%%%%%%%%%%%%% 
 \usepackage[english]{babel}    % language 
@@ -141,15 +144,18 @@
 \setlength{\marginparwidth}{2cm}
 \newcommandx{\notes}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
 
+% For text high light
+\newcommand{\texthighlight}[1]{\textcolor{OliveGreen}{#1}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%
-% font settings  
+% font settings of ToC 
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 % ToC setting for parts 
 \renewcommand{\cftpartfont}{\bfseries\color{Maroon}\large}
 % ToC setting for chapters
 \renewcommand{\cftchappresnum}{\bfseries}%
-\renewcommand{\cftchappagefont}{\normalfont}%
+\renewcommand{\cftchappagefont}{\bfseries}%
 % ToC setting for sections
 \renewcommand{\cftsecpresnum}{\scshape}
 \renewcommand{\cftsecfont}{\normalfont}
@@ -186,7 +192,8 @@
     }%
   }%
   {25pt}
-  {\chaptitlefont}
+  {\raggedright\chaptitlefont}
+  [\normalsize\vspace*{.8\baselineskip}\titlerule]
 \titlespacing*{\chapter}
   {0pt}{40pt}{40pt}
 
