@@ -1,11 +1,27 @@
 %!TEX root = ./thesis.tex
 %****************************************************************
+% preamble only for part II 
+%****************************************************************
+\renewcommand{\appendixname}{PAPER} % chapter name to PAPER
+
+\titlecontents{chapter}% <chapter-type>
+  [4.8em]% <left>
+  {\vspace*{1em}\bfseries\normalsize}% <above-code>
+  {\hspace*{-4.8em}Paper\ \thecontentslabel:\quad}% <numbered-entry-format>
+  {}% <numberless-entry-format>
+  {\normalsize\hfill\contentspage}% <filler-page-format>
+
+\fancyhf{}   % define header/footer layout
+\fancyhead{} % get rid of the headers on plain pages
+\renewcommand{\headrulewidth}{0pt} % and the line
+% title font for paper titles  
+\renewcommand{\chaptitlefont}{\bfseries\Large}
+
+%****************************************************************
 % Paper I
 %****************************************************************
 
-\chapter*{Paper A}
-\addcontentsline{toc}{chapter}{Paper A}
-\section*{Paper title}
+\chapter{Scientific Paper I}
 
 \noindent List of authors\\
 
@@ -18,9 +34,7 @@
 %****************************************************************
 % Paper II
 %****************************************************************
-\chapter*{Paper B}
-\addcontentsline{toc}{chapter}{Paper B}
-\section*{Paper title}
+\chapter{Scientific Paper II}
 
 \noindent List of authors\\
 

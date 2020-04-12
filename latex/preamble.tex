@@ -10,7 +10,6 @@
 \usepackage{anyfontsize}
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage{textcase}
-
 %%%%%%%%%%%%%%%%%% % General packages %%%%%%%%%%%%%%%%%% 
 \usepackage[english]{babel}    % language 
 \usepackage{xspace} 
@@ -41,8 +40,9 @@
 \usepackage{units}				    % semantically represent numbers with units
 \usepackage{url}
 \usepackage{tocloft}                % controlling the typographic design of the Table of Contents
-\usepackage[acronym,toc]{glossaries}       % nice macros for handling all acronyms in the thesis
-
+\usepackage{titletoc}
+\usepackage{appendix}
+\usepackage[acronym,toc]{glossaries} % nice macros for handling all acronyms in the thesis
 %%%%%%%%%%%
 % Tikz/PGF
 %%%%%%%%%%%
@@ -184,7 +184,7 @@
 
 \titleformat{\chapter}[display]
   {\normalfont\filleft}
-  {{\chapnamefont\chaptertitlename}%
+  {{\chapnamefont\chaptertitlename\enspace}%
     \makebox[36pt][l]{\color{RoyalBlue}\hspace{.001em}%
       \resizebox{!}{\beforechapskip}{\chapterNumber\thechapter}%
       \hspace{.001em}%
