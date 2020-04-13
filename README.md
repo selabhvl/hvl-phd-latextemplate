@@ -49,7 +49,7 @@ to use, such as [okular](https://okular.kde.org/): `okular thesis.pdf`.
 `> make clean`
 
 
-*Possible ways to use Latex: 
+Possible ways to use Latex: 
 =========
 
 1. vim/nvim
