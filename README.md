@@ -50,11 +50,7 @@ to use, such as [okular](https://okular.kde.org/): `okular thesis.pdf`.
 
 * Possible ways to use Latex: 
 
-1. [TeXstudio](https://www.texstudio.org/)
-
-2. [Using Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726)
-
-3. vim/nvim
+1. vim/nvim
 
       a. [Install NeoVim and Plugins with vim-plug](https://www.linode.com/docs/tools-reference/tools/how-to-install-neovim-and-plugins-with-vim-plug/)
   
@@ -65,3 +61,9 @@ to use, such as [okular](https://okular.kde.org/): `okular thesis.pdf`.
       d. [10 Vim Plugins for Writing](https://dev.to/tomfern/10-vim-plugins-for-writing-2k66)
 
       e. To speed up the wirting if there are lots of mathematics: [take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/)
+
+2. [Using Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726)
+
+3. [Overleaf](https://www.overleaf.com/)
+
+4. [TeXstudio](https://www.texstudio.org/)

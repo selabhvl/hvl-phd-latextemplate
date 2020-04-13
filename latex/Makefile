@@ -13,4 +13,4 @@ clean:
 	@rm -f *.bbl
 	@rm -f *.blg
 	@rm -f *.upa
-	@find . -name \*.aux -type f -delete
+	@find . -name \*.aux -delete
