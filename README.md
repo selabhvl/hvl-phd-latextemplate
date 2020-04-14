@@ -4,7 +4,10 @@ Introduction
 Latex template for HVL PhD dissertations.
 
 The template uses the latexmk to compile the latex to pdf by running a makefile enclosed.
+
 All the default settings of the template are in the preamble.tex and macros.tex.
+
+The font size of the PhD thesis template is 12pt.
 
 The fonts used in the template include:
 1. [Palatino](https://en.wikipedia.org/wiki/Palatino#Palatino) font: [tgpagella](https://tug.org/FontCatalogue/texgyrepagella/)

@@ -1,21 +1,20 @@
 \documentclass[12pt]{book} % Default is book 12 pt regular A4 based on setting file
 % Default regular A4, based on setting file 
-\usepackage[paper = a4paper,         %To be shrunk to 80% when printed
+\usepackage[paper = a4paper,         % A4 paper
 			twoside,                 %Two-side mode, switches margins on
 			bindingoffset = 2mm,     %Offset for binding side of page
 			hmargin = 25mm,          %Left and right margin
             vmargin = 25mm,          %Top and bottom margin
-			dvipdfm]
+            pdftex]
 			{geometry}
 
 %****************************************************************
 % Note: Make all your adjustments in here in preamble and macros 
 %****************************************************************
-%
 % Include all packages
 %
 \include{preamble}
-%
+
 % Include user-defined macros
 %
 \include{macros}
@@ -30,8 +29,15 @@
 %\headheight 30pt
 
 %****************************************************************
+% \thecurrentfontsize can be used to check the used font size 
+%****************************************************************
+\makeatletter
+\newcommand\thecurrentfontsize{The current font size is: \f@size pt}
+\makeatother
+
+%****************************************************************
 % Hyphenation
-%*******************************************************
+%****************************************************************
 % TeX is very proud of its hyphenation engine, to the point where it
 % hyphenates _everything_ just to show off.  Increasing penalty for
 % hyphenation, and increase tolerance for underfull boxes can make
