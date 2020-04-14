@@ -4,7 +4,7 @@ default:
 	open -a Preview thesis.pdf 
 cont:
 	latexmk -pdf -pvc -view=pdf thesis.tex
-
+	open -a Preview thesis.pdf 
 clean:
 	@latexmk -C
 	@rm -f *.brf

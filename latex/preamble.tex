@@ -10,6 +10,7 @@
 \usepackage{anyfontsize}
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage{textcase}
+
 %%%%%%%%%%%%%%%%%% % General packages %%%%%%%%%%%%%%%%%% 
 \usepackage[english]{babel}    % language 
 \usepackage{xspace} 
@@ -39,10 +40,11 @@
 \usepackage{float}
 \usepackage{units}				    % semantically represent numbers with units
 \usepackage{url}
-\usepackage{tocloft}                % controlling the typographic design of the Table of Contents
-\usepackage{titletoc}
+\usepackage{titletoc}               % controlling design of Table of Contents too
 \usepackage{appendix}
 \usepackage[acronym,toc]{glossaries} % nice macros for handling all acronyms in the thesis
+\usepackage{etoolbox}
+
 %%%%%%%%%%%
 % Tikz/PGF
 %%%%%%%%%%%
@@ -75,7 +77,7 @@
 \usepackage[noend]{algpseudocode}
 \usepackage[inline]{enumitem}
 
-% Font size and spacing
+% Font size and spacing for algorithms
 \newcommand{\algfontsize}{\footnotesize}
 \newcommand{\algcommentfontsize}{\scriptsize}
 \newcommand{\algtypefontsize}{\scriptsize}
@@ -147,12 +149,17 @@
 % For text high light
 \newcommand{\texthighlight}[1]{\textcolor{OliveGreen}{#1}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-% font settings of ToC 
-%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% font settings of table of contents (ToC) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tocloft} % controlling the typographic design of the Table of Contents
 % ToC setting for parts 
-\renewcommand{\cftpartfont}{\bfseries\color{Maroon}\large}
+\makeatletter
+\let\oldl@part\l@part
+\renewcommand*\l@part[2]{\oldl@part{\MakeUppercase{#1}}{#2}}
+\makeatother
+\renewcommand{\cftpartfont}{\color{Maroon}\bfseries\normalsize}%
+\renewcommand{\cftpartpagefont}{\bfseries}%
 % ToC setting for chapters
 \renewcommand{\cftchappresnum}{\bfseries}%
 \renewcommand{\cftchappagefont}{\bfseries}%
@@ -165,10 +172,18 @@
 \renewcommand{\cftsubsecfont}{\normalfont}
 \renewcommand{\cftsubsecpagefont}{\normalfont}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Layout style setup of the chapter-, section-, subsection-, subsubsection- etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titlesec}               % controlling title styles 
+% Part Style Setup
+\DeclareRobustCommand{\spaceduppercaps}[1]{\textls[30]{\scshape\MakeTextUppercase{#1}}}
+\titleformat{\part}[display]
+{\bfseries\centering\HUGE}%
+{\thispagestyle{empty}\partname~\MakeTextUppercase{\thepart}}{1em}%
+{\color{Maroon}\spaceduppercaps}[\bigskip\normalfont\normalsize]
+
 % Chapter Style Setup
-%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{titlesec}
 \newcommand*\HUGE{\Huge}
 \newcommand*\chapnamefont{\itshape\color{RoyalBlue}\HUGE\MakeUppercase}
 \DeclareFixedFont{\chapterNumber}{U}{eur}{b}{n}{70}
@@ -197,9 +212,7 @@
 \titlespacing*{\chapter}
   {0pt}{40pt}{40pt}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% Section Style Setup:                                                 
-%%%%%%%%%%%%%%%%%%%%%%%%
+% Section, Subsection, Subsubsection, Paragraph, Subparagraph Styles Setup:                   
 % the baselineskip should be 1.2 times the font size  
 \titleformat*{\section}{\fontsize{18}{21.6}\selectfont\bfseries}
 \titleformat*{\subsection}{\fontsize{16}{19.2}\selectfont\bfseries}
