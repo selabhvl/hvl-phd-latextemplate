@@ -55,7 +55,7 @@ to use, such as [okular](https://okular.kde.org/): `okular thesis.pdf`.
 Possible ways to use Latex: 
 =========
 
-1. vim/nvim
+1. vim/neovim, definitely can speed up the writing process by autocomplete, snippet, etc. plugins 
 
       a. [Install NeoVim and Plugins with vim-plug](https://www.linode.com/docs/tools-reference/tools/how-to-install-neovim-and-plugins-with-vim-plug/)
   
