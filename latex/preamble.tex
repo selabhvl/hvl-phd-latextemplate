@@ -177,7 +177,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{titlesec}               % controlling title styles 
 % Part Style Setup
-\DeclareRobustCommand{\spaceduppercaps}[1]{\textls[30]{\scshape\MakeTextUppercase{#1}}}
+\DeclareRobustCommand{\spaceduppercaps}[1]{\textls[80]{\scshape\MakeTextUppercase{#1}}}
 \titleformat{\part}[display]
 {\bfseries\centering\HUGE}%
 {\thispagestyle{empty}\partname~\MakeTextUppercase{\thepart}}{1em}%
@@ -187,7 +187,8 @@
 \newcommand*\HUGE{\Huge}
 \newcommand*\chapnamefont{\itshape\color{RoyalBlue}\HUGE\MakeUppercase}
 \DeclareFixedFont{\chapterNumber}{U}{eur}{b}{n}{70}
-\newcommand*\chaptitlefont{\bfseries\huge}
+\DeclareRobustCommand{\chapterspaceduppercaps}[1]{\textls[50]{\scshape\MakeTextUppercase{#1}}}
+\newcommand*\chaptitlefont{\fontsize{18}{21.6}\chapterspaceduppercaps}
 
 \newlength\beforechapskip
 \newlength\midchapskip
@@ -200,17 +201,17 @@
 \titleformat{\chapter}[display]
   {\normalfont\filleft}
   {{\chapnamefont\chaptertitlename\enspace}%
-    \makebox[36pt][l]{\color{RoyalBlue}\hspace{.001em}%
+    \makebox[38pt][l]{\color{RoyalBlue}\hspace{.001em}%
       \resizebox{!}{\beforechapskip}{\chapterNumber\thechapter}%
       \hspace{.001em}%
       \rule{\midchapskip}{\beforechapskip}%
     }%
   }%
-  {25pt}
+  {60pt}
   {\raggedright\chaptitlefont}
-  [\normalsize\vspace*{.8\baselineskip}\titlerule]
+  [\normalsize\vspace*{1.2\baselineskip}\titlerule]
 \titlespacing*{\chapter}
-  {0pt}{40pt}{40pt}
+  {0pt}{20pt}{20pt}
 
 % Section, Subsection, Subsubsection, Paragraph, Subparagraph Styles Setup:                   
 % the baselineskip should be 1.2 times the font size  
