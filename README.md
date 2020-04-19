@@ -10,12 +10,13 @@ All the default settings of the template are in the preamble.tex and macros.tex.
 The font size of the PhD thesis template is 12pt.
 
 The fonts used in the template include:
-1. [Palatino](https://en.wikipedia.org/wiki/Palatino#Palatino) font: [tgpagella](https://tug.org/FontCatalogue/texgyrepagella/)
-   pacakge
+1. [Palatino](https://en.wikipedia.org/wiki/Palatino#Palatino) font with old-style figures: [newpxtext](https://ctan.org/pkg/newpx?lang=en) package.
 
-2. Typewriter font: [beramono](https://tug.org/FontCatalogue/beramono/) package
+If you do not want to use old-style figures, then you can change to [tgpagella](https://tug.org/FontCatalogue/texgyrepagella/) package.
 
-3. The Euler-VM fonts for maths (blend well with Palatino): [eulervm](http://ftp.riken.jp/tex-archive/fonts/eulervm/doc/latex/eulervm/eulervm.pdf) package 
+2. Typewriter font: [beramono](https://tug.org/FontCatalogue/beramono/) package.
+
+3. The Euler-VM fonts for maths (blend well with Palatino): [eulervm](http://ftp.riken.jp/tex-archive/fonts/eulervm/doc/latex/eulervm/eulervm.pdf) package. 
 
 Install/Upate Latest Latex
 ========
