@@ -1,6 +1,7 @@
 %!TEX root = ./thesis.tex 
 %%%%%%%%%%%%%%%%%% % Font settings %%%%%%%%%%%%%%%%%%%%% 
 \usepackage[osf]{newpxtext} % Palatino font with old-style figures
+\linespread{1.05}
 \usepackage[T1,euler-digits]{eulervm} % Euler-VM fonts for maths 
 \usepackage[scaled]{beramono}   % typewriter font
 \usepackage[T1]{fontenc}	    % Activate Type 1 fonts 
@@ -44,7 +45,8 @@
 \usepackage{appendix}
 \usepackage[acronym,toc]{glossaries} % nice macros for handling all acronyms in the thesis
 \usepackage{etoolbox}
-
+\usepackage{emptypage}              % remove head and foot for empty pages
+\usepackage{quotchap}               % add your favorite quotation before chapter
 %%%%%%%%%%%
 % Tikz/PGF
 %%%%%%%%%%%
@@ -197,11 +199,12 @@
 \addtolength\midchapskip{-\oddsidemargin}
 \addtolength\midchapskip{-1in}
 \setlength\beforechapskip{18mm}
+\newcommand\boxsizept{38pt}
 
 \titleformat{\chapter}[display]
   {\normalfont\filleft}
   {{\chapnamefont\chaptertitlename\enspace}%
-    \makebox[38pt][l]{\color{RoyalBlue}\hspace{.001em}%
+    \makebox[\boxsizept][l]{\color{RoyalBlue}\hspace{.001em}%
       \resizebox{!}{\beforechapskip}{\chapterNumber\thechapter}%
       \hspace{.001em}%
       \rule{\midchapskip}{\beforechapskip}%
@@ -238,6 +241,7 @@
             citecolor=CTcitation,           % Color of cite links
             linkcolor=CTlink,               % Color of links
             urlcolor=CTurl,                 % Color of urls
+            hypertexnames=false,
 			]{hyperref}
 \newcommand{\aref}[1]{\autoref{#1}} % Enable links
 
@@ -259,13 +263,18 @@
 \fancyhf{}
 
 % Define header/footer layout
-\fancyhead[LE,RO]{\bfseries\thepage}
-\fancyhead[LO]{\bfseries\rightmark}
-\fancyhead[RE]{\bfseries\leftmark}
+\fancyhead[LE]{\bfseries\leftmark}
+\fancyhead[RO]{\bfseries\rightmark}
 \renewcommand{\headrulewidth}{0.5pt}
-
+\fancyfoot[LE,RO]{\bfseries\thepage}
 % make space for the rule
 \fancypagestyle{plain}{
 	\fancyhead{}                           %get rid of the headers on plain pages
+    \fancyfoot{}
 	\renewcommand{\headrulewidth}{0pt}     % and the line
 }
+
+% reset counter for each part of the thesis
+\usepackage{chngcntr}          % the package must be after package hyperref 
+\counterwithin*{chapter}{part} % reset counter for each part
+

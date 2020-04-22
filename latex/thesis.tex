@@ -51,17 +51,17 @@
 % Set up the front page, with author, title, etc.
 %*******************************************************
 \title{
-    {\fontsize{20}{24}{\color{Maroon}\spaceduppercaps{Thesis Title Goes Here}}}
-    % Give smaller font size if the title is too long.
+    {\fontsize{20}{24}{\color{Maroon}\spaceduppercaps{Thesis Title Goes Here }}}
+    % Give smaller font size if the title is too long and goes to 2nd page.
 	\author{
         \textbf{Doctoral Dissertation by}\\ 
-        \textbf{Author Name}\vspace{1cm}\\
+        \textbf{Author Name}\vspace{0.5cm}\\
 		Thesis submitted for\\ 
         the degree of Philosophiae Doctor (PhD)\\
         in\\ 
         Computer Science:\\
-        {\fontsize{12}{14}Software Engineering, Sensor Networks and Engineering Computing}\vspace{1cm}\\
-		\includegraphics[scale=0.36]{logos/logo.pdf}\vspace{2em}\\
+        {\fontsize{12}{14}Software Engineering, Sensor Networks and Engineering Computing}\vspace{0.5cm}\\
+		\includegraphics[scale=0.36]{logos/logo.pdf}\vspace{0.5cm}\\
         Department of Computer Science,\\ 
 		Electrical Engineering and Mathematical Sciences\vspace{0.3cm}\\
 		Faculty of Engineering and Science \vspace{0.3cm}\\
@@ -87,6 +87,7 @@
 %*******************************************************
 % Maketitle & copyright page
 %*******************************************************
+\cleardoublepage
 \maketitle
 \thispagestyle{empty}
 
@@ -130,8 +131,14 @@ Bergen, Norway
 \include{preface/preface}
 \include{preface/acknowledgements}
 \include{preface/abstract}
-\tableofcontents
 
+%*******************************************************
+% table of contents 
+%*******************************************************
+\cleardoublepage
+\tableofcontents
+\thispagestyle{empty}
+\cleardoublepage
 %*******************************************************
 % Mainmatter
 %*******************************************************
@@ -149,33 +156,38 @@ Bergen, Norway
 %
 % The bibliography
 %
+\cleardoublepage
 \bibliographystyle{abbrv}
 \bibliography{thesis,chapter-1/chapter-1}
+\addcontentsline{toc}{chapter}{\numberline{}Bibliography}
+\cleardoublepage
 
 % Part Two:
 \part{Articles}
 \label{part:2}
-\begin{appendices}
 \include{papers}  % The papers, with cover pages
-\end{appendices}
 
 %*******************************************************
 % Backmatter
 %*******************************************************
-\newpage
-\listoffigures
-
-\let\cleardoublepage\clearpage
-
-\newpage
-\lstlistoflistings
-
-\let\cleardoublepage\clearpage
-
-\newpage
-\listoftables
+% appendices if you need
+\cleardoublepage
+\begin{appendices}
+    \include{appendix}
+\end{appendices}
+\addcontentsline{toc}{part}{\numberline{}Appendix}
 
 \backmatter
+% list of figures if you need 
+%\newpage
+%\listoffigures
+%\let\cleardoublepage\clearpage % single paper, don't use it if you need double page
+
+% list of tables if you need
+%\newpage
+%\listoftables
+%\let\cleardoublepage\clearpage % single paper, don't use it if you need double page
+
 %*******************************************************
 % Game Over
 %*******************************************************

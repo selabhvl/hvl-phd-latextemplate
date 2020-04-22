@@ -22,6 +22,21 @@ If you do not want to use old-style figures, then you can change to [tgpagella](
 
 3. The Euler-VM fonts for maths (blend well with Palatino): [eulervm](http://ftp.riken.jp/tex-archive/fonts/eulervm/doc/latex/eulervm/eulervm.pdf) package. 
 
+Part 2 of the PhD latex template consists of a collection of publications via including
+a papers.tex file. If you want to write the thesis in monograph style, then you
+don't need to include papers.tex.
+
+For the thesis by publications style, in the papers.tex file, the default
+setting is to use ``` \includepdf{} ``` to include PDF files in the papers folder.
+The reason to choose this way to directly attach PDF files is to make the life
+easier.
+
+But, if you don't like this way, you can use ``` \subimport{} ``` instead of 
+``` \includepdf{} ``` in papers.tex to compile all your latex files from your pervious publications.
+
+
+A latex book in case you need:[LaTeX for Complete Novices](https://www.dickimaw-books.com/latex/novices/index.html)
+
 Install/Upate Latest Latex
 ========
 * Install TeX document production system (Latex):

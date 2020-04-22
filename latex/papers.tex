@@ -2,8 +2,12 @@
 %****************************************************************
 % preamble only for part II 
 %****************************************************************
-\renewcommand{\appendixname}{PAPER} % chapter name to PAPER
 
+% change the time name for chapters of the part 2
+\renewcommand{\chaptertitlename}{PAPER} 
+\renewcommand\thechapter{\Alph{chapter}}
+
+% change style for the table of contents of the part 2
 \titlecontents{chapter}% <chapter-type>
   [4.8em]% <left>
   {\vspace*{1em}\bfseries\normalsize}% <above-code>
@@ -11,17 +15,24 @@
   {}% <numberless-entry-format>
   {\normalsize\hfill\contentspage}% <filler-page-format>
 
-\fancyhf{}   % define header/footer layout
+% redefine header/footer layout for part 2
+\fancyhf{}
 \fancyhead{} % get rid of the headers on plain pages
 \renewcommand{\headrulewidth}{0pt} % and the line
-% title font for paper titles  
-\renewcommand{\chaptitlefont}{\bfseries\Large}
+\fancyfoot[LE,RO]{\bfseries\thepage}
+\fancypagestyle{plain}{
+    \fancyfoot[LE,RO]{\bfseries\thepage}
+}
+\pagestyle{empty}
 
 %****************************************************************
 % Paper I
 %****************************************************************
+% adjust the position of the bluebox of each chapter if you have OCD like me
+\renewcommand{\boxsizept}{60pt} 
 
 \chapter{Scientific Paper I}
+\thispagestyle{empty}
 
 \noindent List of authors\vspace{3ex}
 
@@ -29,19 +40,32 @@
 \cleardoublepage
 
 % include paper pdf file
-\includepdf[pages=-]{papers/paper1.pdf}
+\includepdf[pagecommand=\thispagestyle{plain}, pages=-]{papers/paper1.pdf}
 
 %****************************************************************
 % Paper II
 %****************************************************************
+\renewcommand{\boxsizept}{52pt}
 \chapter{Scientific Paper II}
+\thispagestyle{empty}
+
+\noindent List of authors\vspace{3ex}
+
+\noindent \textit{In \Proc \IntlConf \ldots} \textbf{IEEE}, 035303 (2017)
+\cleardoublepage
+\includepdf[pagecommand=\thispagestyle{plain}, pages=-]{papers/paper2.pdf}
+
+
+%****************************************************************
+% Paper III
+%****************************************************************
+\renewcommand{\boxsizept}{56pt}
+\chapter{Scientific Paper III}
+\thispagestyle{empty}
 
 \noindent List of authors\vspace{3ex}
 
 \noindent \textit{In \Proc \IntlConf \ldots} \textbf{IEEE}, 035303 (2017)
 \cleardoublepage
 
-\includepdf[pages=-]{papers/paper2.pdf}
-
-
-
+%\includepdf[pagecommand=\thispagestyle{plain}, pages=-]{papers/}
