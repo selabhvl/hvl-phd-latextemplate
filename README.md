@@ -76,7 +76,7 @@ to use, such as [okular](https://okular.kde.org/): `okular thesis.pdf`.
 Possible ways to use Latex: 
 =========
 
-1. vim/neovim, definitely can speed up the writing process by autocomplete, snippet, etc. plugins 
+1. vim/[neovim](https://neovim.io/), definitely can speed up the writing process by autocomplete, snippet, etc. plugins 
 
       a. [Install NeoVim and Plugins with vim-plug](https://www.linode.com/docs/tools-reference/tools/how-to-install-neovim-and-plugins-with-vim-plug/)
   
@@ -90,8 +90,10 @@ Possible ways to use Latex:
 
       f. To speed up the wirting if there are lots of mathematics: [take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/)
 
-2. [Using Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726)
+2. [Emacs](https://www.gnu.org/software/emacs/). Although I used neovim to finish my thesis, one colleague and friend of me seems used Emacs to write his thesis. I guess some one knows about the Editor war, so I also put Emacs here.;)
 
-3. [Overleaf](https://www.overleaf.com/)
+3. [Using Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726)
 
-4. [TeXstudio](https://www.texstudio.org/)
+4. [Overleaf](https://www.overleaf.com/)
+
+5. [TeXstudio](https://www.texstudio.org/)
