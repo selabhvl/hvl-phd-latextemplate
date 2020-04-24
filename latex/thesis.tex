@@ -1,3 +1,15 @@
+%****************************************************************
+% File version control 
+%****************************************************************
+% Draft Version: 
+% change to \DraftMargintrue if you want to have more space for outside margin 
+% so that you supervisors can write comments there.
+
+\newif\ifDraftMargin     
+    \DraftMarginfalse     % default is false 
+
+% Final version:
+% the settings for final version below
 \documentclass[12pt]{book} % Default is book 12 pt regular A4 based on setting file
 % Default regular A4, based on setting file 
 \usepackage[paper = a4paper,         % A4 paper
@@ -118,6 +130,13 @@ Printed production: \vspace{3ex}
 
 Bergen, Norway
 \end{minipage}
+
+%*******************************************************
+% Draft version settings 
+%*******************************************************
+\ifDraftMargin
+    \newgeometry{bindingoffset=2mm, inner=20mm, outer=35mm, vmargin=25mm}
+\fi
 
 %*******************************************************
 % Dedication
