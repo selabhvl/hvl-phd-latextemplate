@@ -32,6 +32,9 @@
 \include{macros}
 %
 
+% package used to generate dummy texts with the \blindtext
+\usepackage{blindtext}
+
 % If you need generate pdf based on a selected page range such as page 31-40:
 %\usepackage[31-40]{pagesel}
 
@@ -147,6 +150,7 @@ Bergen, Norway
 % Frontmatter
 %*******************************************************
 \frontmatter
+\pagestyle{empty}
 \include{preface/preface}
 \include{preface/acknowledgements}
 \include{preface/abstract}
@@ -156,12 +160,12 @@ Bergen, Norway
 %*******************************************************
 \cleardoublepage
 \tableofcontents
-\thispagestyle{empty}
 \cleardoublepage
 %*******************************************************
 % Mainmatter
 %*******************************************************
 \mainmatter
+\pagestyle{main} % main style for chapters of thesis
 %
 % Main chapters
 %
@@ -176,6 +180,7 @@ Bergen, Norway
 % The bibliography
 %
 \cleardoublepage
+\pagestyle{bibliography}
 \bibliographystyle{abbrv}
 \bibliography{thesis,chapter-1/chapter-1}
 \addcontentsline{toc}{chapter}{\numberline{}Bibliography}
@@ -191,22 +196,18 @@ Bergen, Norway
 %*******************************************************
 % appendices if you need
 \cleardoublepage
+\pagestyle{appendix}
 \begin{appendices}
     \include{appendix}
 \end{appendices}
 \addcontentsline{toc}{part}{\numberline{}Appendix}
 
 \backmatter
+\pagestyle{list}
 % list of figures if you need 
-%\newpage
 %\listoffigures
-%\let\cleardoublepage\clearpage % single paper, don't use it if you need double page
-
 % list of tables if you need
-%\newpage
 %\listoftables
-%\let\cleardoublepage\clearpage % single paper, don't use it if you need double page
-
 %*******************************************************
 % Game Over
 %*******************************************************

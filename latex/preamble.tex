@@ -246,35 +246,91 @@
 \newcommand{\aref}[1]{\autoref{#1}} % Enable links
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-% Page Setup
-%%%%%%%%%%%%%%%%%%%%%%%%
+% Page header/footer Setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Set fancy page header using fancyhdr package
+% Set fancy page header/footer using fancyhdr package
 %
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
+% color for texts of footer
+\definecolor{halfgray}{gray}{0.55}
+
+% header position setting
+\setlength{\headheight}{16pt}
+\setlength{\headsep}{24pt}
 % Ensure that the chapter and section headings are in lowercase
-\setlength{\headheight}{15pt}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 
-% Delete current section for header/footer
+% Delete current header/footer
 \fancyhf{}
 
+% define main style for thesis chapters
+\fancypagestyle{main}{
 % Define header/footer layout
-\fancyhead[LE]{\bfseries\leftmark}
-\fancyhead[RO]{\bfseries\rightmark}
-\renewcommand{\headrulewidth}{0.5pt}
-\fancyfoot[LE,RO]{\bfseries\thepage}
-% make space for the rule
-\fancypagestyle{plain}{
-	\fancyhead{}                           %get rid of the headers on plain pages
-    \fancyfoot{}
-	\renewcommand{\headrulewidth}{0pt}     % and the line
+    \fancyhead[lE]{\bfseries\itshape\leftmark}
+    \fancyhead[RO]{\bfseries\itshape\rightmark}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[LE]{\bfseries\thepage\qquad\textcolor{halfgray}{\chaptername}\enskip\textcolor{halfgray}{\thechapter}}
+    \fancyfoot[RO]{\bfseries\textcolor{halfgray}{\textit{You are here\enskip$\blacktriangleright$}}\qquad\thepage}
 }
 
+% define style for plain page
+\fancypagestyle{plain}{
+	\fancyhead{}    % get rid of the headers on plain pages
+    \fancyfoot{}    % get rid of the footers on plain pages
+	\renewcommand{\headrulewidth}{0pt} % and no line
+}
+
+% define style for bibliography 
+\fancypagestyle{bibliography}{
+% Define header/footer layout
+    \fancyhead[lE]{\bfseries\itshape\leftmark}
+    \fancyhead[RO]{\bfseries\itshape\rightmark}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[LE]{\bfseries\thepage\qquad\textcolor{halfgray}{Bibliography}}
+    \fancyfoot[RO]{\bfseries\textcolor{halfgray}{\textit{You are here\enskip$\blacktriangleright$}}\qquad\thepage}
+}
+
+% define style for pdf papers attached
+\fancypagestyle{pdfpapers}{
+    \fancyhead{} %get rid of the headers on plain pages
+    \renewcommand{\headrulewidth}{0pt} % and no line
+    \fancypagestyle{plain}{
+        \fancyfoot[LE]{\bfseries\thepage\qquad\textcolor{halfgray}{\chaptername}\enskip\textcolor{halfgray}{\thechapter}}
+        \fancyfoot[RO]{\bfseries\textcolor{halfgray}{\textit{You are here\enskip$\blacktriangleright$}}\qquad\thepage}
+    }
+}
+
+% define style for compiled papers attached
+\fancypagestyle{compiledpapers}{
+    \fancyhead{} %get rid of the headers on plain pages
+    \renewcommand{\headrulewidth}{0pt} % and no line
+    \fancyfoot[LE]{\bfseries\thepage\qquad\textcolor{halfgray}{\chaptername}\enskip\textcolor{halfgray}{\thechapter}}
+    \fancyfoot[RO]{\bfseries\textcolor{halfgray}{\textit{You are here\enskip$\blacktriangleright$}}\qquad\thepage}
+}
+
+% define style for lists in the end
+\fancypagestyle{list}{
+    \fancyhead{} %get rid of the headers on plain pages
+    \renewcommand{\headrulewidth}{0pt} % and the line
+    \fancyfoot[LE]{\bfseries\thepage\qquad\textcolor{halfgray}{List}}
+    \fancyfoot[RO]{\bfseries\textcolor{halfgray}{\textit{You are here\enskip$\blacktriangleright$}}\qquad\thepage}
+}
+
+% define style for appendix in the end
+\fancypagestyle{appendix}{
+    \fancyhead{} %get rid of the headers on plain pages
+    \renewcommand{\headrulewidth}{0pt} % and the line
+    \fancyfoot[LE]{\bfseries\thepage\qquad\textcolor{halfgray}{Appendix}}
+    \fancyfoot[RO]{\bfseries\textcolor{halfgray}{\textit{You are here\enskip$\blacktriangleright$}}\qquad\thepage}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % reset counter for each part of the thesis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{chngcntr}          % the package must be after package hyperref 
 \counterwithin*{chapter}{part} % reset counter for each part
 
