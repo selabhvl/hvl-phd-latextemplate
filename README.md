@@ -63,7 +63,8 @@ If you already have Latex (Tex Live) in your machine, then update it to the late
 Compiling
 =========
 
-* To generate the main pdf file, you can simply run the command:
+* To generate the main pdf file, you can simply run the command defined in the
+  Makefile:
 
 `> make`
 
@@ -85,6 +86,16 @@ to use, such as [okular](https://okular.kde.org/): `okular thesis.pdf`.
 
 `> make clean`
 
+
+NOTE: if you do NOT want to use the Makefile, then compile in following 4 steps:
+
+1. `pdflatex thesis.tex`
+
+2. `bibtex thesis`
+
+3. `pdflatex thesis.tex`
+
+4. `pdflatex thesis.tex`
 
 Possible ways to use Latex: 
 =========
