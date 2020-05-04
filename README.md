@@ -34,6 +34,19 @@ easier.
 But, if you don't like this way, you can use ``` \subimport{} ``` instead of 
 ``` \includepdf{} ``` in papers.tex to compile all your latex files from your pervious publications.
 
+However, the [HVL PhD thesis Word template](\href{https://www.hvl.no/contentassets/14ac5045c88248ffa1cf8c4927111040/hvl-avhandling.dotx){} (page 11) on the HVL website states: 
+
+
+    "Publiserte artikler kan settes inn i avhandlingen slik de er publiserte og trenger ikke konverteres til denne malen."
+
+
+So, if you want to directly attach original publications (with original publishers' format pdf files), 
+you only need to use "includepdf", but you might need to check the copyright of your publications about republishing.
+However, if you don't want to attach pdf files directly but prefer to recompile 
+your Latex files for previous papers, then just can use "subimport".   
+You can ask doctoral adviser Prof. Håvard Helstrup and your supervisors to get 
+their opinions for which way is reasonable and how to deal with copyright of your publications.
+
 
 A latex book in case you need:[LaTeX for Complete Novices](https://www.dickimaw-books.com/latex/novices/index.html)
 
