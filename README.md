@@ -34,7 +34,7 @@ easier.
 But, if you don't like this way, you can use ``` \subimport{} ``` instead of 
 ``` \includepdf{} ``` in papers.tex to compile all your latex files from your pervious publications.
 
-However, the [HVL PhD thesis Word template](\href{https://www.hvl.no/contentassets/14ac5045c88248ffa1cf8c4927111040/hvl-avhandling.dotx){} (page 11) on the HVL website states: 
+However, the [HVL PhD thesis Word template](https://www.hvl.no/contentassets/14ac5045c88248ffa1cf8c4927111040/hvl-avhandling.dotx/) (page 11) on the HVL website states: 
 
 
     "Publiserte artikler kan settes inn i avhandlingen slik de er publiserte og trenger ikke konverteres til denne malen."
