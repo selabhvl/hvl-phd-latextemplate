@@ -8,6 +8,12 @@
 \renewcommand\thechapter{\Alph{chapter}}
 \renewcommand{\chaptername}{Paper}
 \renewcommand\thesection{\arabic{section}}
+% below renewcommands only useful if you use subimport
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thesubtable}{\arabic{subtable}}
+\renewcommand{\thesubfigure}{\arabic{subfigure}}
+\renewcommand{\theequation}{\arabic{equation}}
 
 % change style for the table of contents of the part 2
 \titlecontents{chapter}% <chapter-type>
@@ -86,6 +92,20 @@
 %****************************************************************
 % Paper IV
 %****************************************************************
+\renewcommand{\boxsizept}{60pt}
+
+\chapter{Scientific Paper IV}
+\thispagestyle{empty}
+
+\noindent List of authors\vspace{3ex}
+
+\noindent \textit{In \Proc \IntlConf \ldots} \textbf{IEEE}, 035303 (2017)
+\cleardoublepage
+
 \pagestyle{compiledpapers} % if you use compiled papers with \subimport{}
-%\subimport{}
-\Blinddocument % dummy document
+
+% the subimport like below to find main.tex in your paper folder,
+% the main.tex also needs to be modified to only have \input{} and other useful commands
+% (better to make a backup first or make a new branch on you paper repository on Github)
+\subimport*{papers/paperdummytex/}{main-dummy.tex}
+
