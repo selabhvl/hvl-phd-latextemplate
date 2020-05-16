@@ -47,8 +47,10 @@ your Latex files for previous papers, then just can use "subimport".
 You can ask doctoral adviser Prof. Håvard Helstrup and your supervisors to get 
 their opinions for which way is reasonable and how to deal with copyright of your publications.
 
+Latex books in case you need:
+1. [LaTeX for Complete Novices](https://www.dickimaw-books.com/latex/novices/index.html)
 
-A latex book in case you need:[LaTeX for Complete Novices](https://www.dickimaw-books.com/latex/novices/index.html)
+2. [Using LaTeX to Write a PhD Thesis](https://www.dickimaw-books.com/booklist.php?book_id=18)
 
 Install/Upate Latest Latex
 ========
@@ -107,12 +109,14 @@ Possible ways to use Latex:
       b. [Setup Neovim for Latex](https://yufanlu.net/2018/09/03/neovim-latex/)
 
       c. [Intelligent autocompletion Coc](https://github.com/neoclide/coc.nvim)
-  
-      d. [Awesome vim plugins for writers](https://opensource.com/article/17/2/vim-plugins-writers)
-  
-      e. [10 Vim Plugins for Writing](https://dev.to/tomfern/10-vim-plugins-for-writing-2k66)
 
-      f. To speed up the wirting if there are lots of mathematics: [take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/)
+      d. [Semantic completion support: tabnine](https://github.com/neoclide/coc-tabnine)
+  
+      e. [Awesome vim plugins for writers](https://opensource.com/article/17/2/vim-plugins-writers)
+  
+      f. [10 Vim Plugins for Writing](https://dev.to/tomfern/10-vim-plugins-for-writing-2k66)
+
+      g. To speed up the wirting if there are lots of mathematics: [take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/)
 
 2. [Emacs](https://www.gnu.org/software/emacs/). Although I used neovim to finish my thesis, one colleague and friend of me seems used Emacs to write his thesis. I guess some one knows about the Editor war, so I also put Emacs here.;)
 
