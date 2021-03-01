@@ -103,6 +103,17 @@ Colors: Aurora \\
 \end{tikzpicture}
 
 \newpage
+\subsection{Table with reference}
+\begin{table}[]
+    \centering
+    \caption{Caption}
+    \begin{tabular}{c|c}
+        A & B \\
+        C~\cite{latex} & D
+    \end{tabular}
+    \label{tab:my_label}
+\end{table}
+
 \subsection{Test for a subsection} 
 This is a test for subsection \ldots
 
